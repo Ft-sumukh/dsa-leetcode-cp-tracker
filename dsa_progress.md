@@ -6,32 +6,102 @@ Track progress across all 20 core DSA topics.
 
 | Topic | Status | Attempted | Solved | Easy | Medium | Hard | Confidence |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| [Arrays](#1-arrays) | Not Started | 0 | 0 | 0 | 0 | 0 | None |
-| [Strings](#2-strings) | Not Started | 0 | 0 | 0 | 0 | 0 | None |
-| [Hashing](#3-hashing) | Not Started | 0 | 0 | 0 | 0 | 0 | None |
-| [Linked Lists](#4-linked-lists) | Not Started | 0 | 0 | 0 | 0 | 0 | None |
-| [Stacks](#5-stacks) | Not Started | 0 | 0 | 0 | 0 | 0 | None |
-| [Queues](#6-queues) | Not Started | 0 | 0 | 0 | 0 | 0 | None |
-| [Recursion](#7-recursion) | Not Started | 0 | 0 | 0 | 0 | 0 | None |
-| [Backtracking](#8-backtracking) | Not Started | 0 | 0 | 0 | 0 | 0 | None |
-| [Sorting](#9-sorting) | Not Started | 0 | 0 | 0 | 0 | 0 | None |
-| [Searching](#10-searching) | Not Started | 0 | 0 | 0 | 0 | 0 | None |
-| [Trees](#11-trees) | Not Started | 0 | 0 | 0 | 0 | 0 | None |
-| [BST](#12-bst) | Not Started | 0 | 0 | 0 | 0 | 0 | None |
-| [Heaps](#13-heaps) | Not Started | 0 | 0 | 0 | 0 | 0 | None |
-| [Graphs](#14-graphs) | Not Started | 0 | 0 | 0 | 0 | 0 | None |
-| [Greedy](#15-greedy) | Not Started | 0 | 0 | 0 | 0 | 0 | None |
-| [Dynamic Programming](#16-dynamic-programming) | Not Started | 0 | 0 | 0 | 0 | 0 | None |
-| [Tries](#17-tries) | Not Started | 0 | 0 | 0 | 0 | 0 | None |
-| [Bit Manipulation](#18-bit-manipulation) | Not Started | 0 | 0 | 0 | 0 | 0 | None |
-| [Advanced Data Structures](#19-advanced-data-structures) | Not Started | 0 | 0 | 0 | 0 | 0 | None |
-| [Advanced Algorithms](#20-advanced-algorithms) | Not Started | 0 | 0 | 0 | 0 | 0 | None |
+| [Arrays](#arrays) | Strong | 12 | 12 | 4 | 6 | 2 | High |
+| [Strings](#strings) | Strong | 10 | 10 | 3 | 6 | 1 | High |
+| [Hashing](#hashing) | Strong | 6 | 6 | 2 | 4 | 0 | High |
+| [Linked Lists](#linked-lists) | Strong | 9 | 9 | 2 | 5 | 2 | High |
+| [Stacks](#stacks) | Learning | 2 | 2 | 1 | 0 | 1 | Low |
+| [Queues](#queues) | Not Started | 0 | 0 | 0 | 0 | 0 | None |
+| [Recursion](#recursion) | Learning | 1 | 1 | 0 | 1 | 0 | Low |
+| [Backtracking](#backtracking) | Practicing | 4 | 4 | 0 | 3 | 1 | Medium |
+| [Sorting](#sorting) | Practicing | 3 | 3 | 0 | 3 | 0 | Medium |
+| [Searching](#searching) | Practicing | 4 | 4 | 1 | 2 | 1 | Medium |
+| [Trees](#trees) | Practicing | 5 | 5 | 3 | 1 | 1 | Medium |
+| [BST](#bst) | Practicing | 3 | 3 | 0 | 3 | 0 | Medium |
+| [Heaps](#heaps) | Learning | 1 | 1 | 0 | 1 | 0 | Low |
+| [Graphs](#graphs) | Learning | 2 | 2 | 0 | 2 | 0 | Low |
+| [Greedy](#greedy) | Practicing | 3 | 3 | 1 | 2 | 0 | Medium |
+| [Dynamic Programming](#dynamic-programming) | Strong | 10 | 10 | 2 | 3 | 5 | High |
+| [Tries](#tries) | Not Started | 0 | 0 | 0 | 0 | 0 | None |
+| [Bit Manipulation](#bit-manipulation) | Learning | 1 | 1 | 0 | 1 | 0 | Low |
+| [Advanced Data Structures](#advanced-data-structures) | Learning | 1 | 1 | 0 | 1 | 0 | Low |
+| [Advanced Algorithms](#advanced-algorithms) | Practicing | 5 | 5 | 3 | 1 | 1 | Medium |
 
 ---
 
 ## 🔍 Detailed Topic Breakdown
 
 ### 1. Arrays
+* **Status:** Strong *(Not Started ➡️ Learning ➡️ Practicing ➡️ Strong ➡️ Interview Ready)*
+* **Confidence Level:** High
+* **Patterns Learned:**
+  * Hashing
+  * Sorting
+  * Two Pointers
+* **Common Mistakes:**
+  * None
+* **Weak Areas:**
+  * None
+* **Problems Needing Reattempt:**
+  * None
+
+### 2. Strings
+* **Status:** Strong *(Not Started ➡️ Learning ➡️ Practicing ➡️ Strong ➡️ Interview Ready)*
+* **Confidence Level:** High
+* **Patterns Learned:**
+  * Greedy
+  * Hashing
+  * Sliding Window
+  * Stack
+  * Two Pointers
+* **Common Mistakes:**
+  * None
+* **Weak Areas:**
+  * None
+* **Problems Needing Reattempt:**
+  * None
+
+### 3. Hashing
+* **Status:** Strong *(Not Started ➡️ Learning ➡️ Practicing ➡️ Strong ➡️ Interview Ready)*
+* **Confidence Level:** High
+* **Patterns Learned:**
+  * Hashing
+  * Prefix Sum
+* **Common Mistakes:**
+  * Solved with O(N^2) brute force. Suboptimal.
+* **Weak Areas:**
+  * Brute force Two Sum solution. Need to practice optimal hash mapping.
+* **Problems Needing Reattempt:**
+  * LeetCode #1 Two Sum
+
+### 4. Linked Lists
+* **Status:** Strong *(Not Started ➡️ Learning ➡️ Practicing ➡️ Strong ➡️ Interview Ready)*
+* **Confidence Level:** High
+* **Patterns Learned:**
+  * Heap
+  * Linked List
+  * Sorting
+  * Two Pointers
+* **Common Mistakes:**
+  * None
+* **Weak Areas:**
+  * None
+* **Problems Needing Reattempt:**
+  * None
+
+### 5. Stacks
+* **Status:** Learning *(Not Started ➡️ Learning ➡️ Practicing ➡️ Strong ➡️ Interview Ready)*
+* **Confidence Level:** Low
+* **Patterns Learned:**
+  * Stack
+* **Common Mistakes:**
+  * None
+* **Weak Areas:**
+  * None
+* **Problems Needing Reattempt:**
+  * None
+
+### 6. Queues
 * **Status:** Not Started *(Not Started ➡️ Learning ➡️ Practicing ➡️ Strong ➡️ Interview Ready)*
 * **Confidence Level:** None
 * **Patterns Learned:**
@@ -43,71 +113,11 @@ Track progress across all 20 core DSA topics.
 * **Problems Needing Reattempt:**
   * None
 
-### 2. Strings
-* **Status:** Not Started
-* **Confidence Level:** None
-* **Patterns Learned:**
-  * None
-* **Common Mistakes:**
-  * None
-* **Weak Areas:**
-  * None
-* **Problems Needing Reattempt:**
-  * None
-
-### 3. Hashing
-* **Status:** Not Started
-* **Confidence Level:** None
-* **Patterns Learned:**
-  * None
-* **Common Mistakes:**
-  * None
-* **Weak Areas:**
-  * None
-* **Problems Needing Reattempt:**
-  * None
-
-### 4. Linked Lists
-* **Status:** Not Started
-* **Confidence Level:** None
-* **Patterns Learned:**
-  * None
-* **Common Mistakes:**
-  * None
-* **Weak Areas:**
-  * None
-* **Problems Needing Reattempt:**
-  * None
-
-### 5. Stacks
-* **Status:** Not Started
-* **Confidence Level:** None
-* **Patterns Learned:**
-  * None
-* **Common Mistakes:**
-  * None
-* **Weak Areas:**
-  * None
-* **Problems Needing Reattempt:**
-  * None
-
-### 6. Queues
-* **Status:** Not Started
-* **Confidence Level:** None
-* **Patterns Learned:**
-  * None
-* **Common Mistakes:**
-  * None
-* **Weak Areas:**
-  * None
-* **Problems Needing Reattempt:**
-  * None
-
 ### 7. Recursion
-* **Status:** Not Started
-* **Confidence Level:** None
+* **Status:** Learning *(Not Started ➡️ Learning ➡️ Practicing ➡️ Strong ➡️ Interview Ready)*
+* **Confidence Level:** Low
 * **Patterns Learned:**
-  * None
+  * Binary Search
 * **Common Mistakes:**
   * None
 * **Weak Areas:**
@@ -116,10 +126,10 @@ Track progress across all 20 core DSA topics.
   * None
 
 ### 8. Backtracking
-* **Status:** Not Started
-* **Confidence Level:** None
+* **Status:** Practicing *(Not Started ➡️ Learning ➡️ Practicing ➡️ Strong ➡️ Interview Ready)*
+* **Confidence Level:** Medium
 * **Patterns Learned:**
-  * None
+  * Backtracking
 * **Common Mistakes:**
   * None
 * **Weak Areas:**
@@ -128,10 +138,11 @@ Track progress across all 20 core DSA topics.
   * None
 
 ### 9. Sorting
-* **Status:** Not Started
-* **Confidence Level:** None
+* **Status:** Practicing *(Not Started ➡️ Learning ➡️ Practicing ➡️ Strong ➡️ Interview Ready)*
+* **Confidence Level:** Medium
 * **Patterns Learned:**
-  * None
+  * Sorting
+  * Two Pointers
 * **Common Mistakes:**
   * None
 * **Weak Areas:**
@@ -140,10 +151,10 @@ Track progress across all 20 core DSA topics.
   * None
 
 ### 10. Searching
-* **Status:** Not Started
-* **Confidence Level:** None
+* **Status:** Practicing *(Not Started ➡️ Learning ➡️ Practicing ➡️ Strong ➡️ Interview Ready)*
+* **Confidence Level:** Medium
 * **Patterns Learned:**
-  * None
+  * Binary Search
 * **Common Mistakes:**
   * None
 * **Weak Areas:**
@@ -152,10 +163,12 @@ Track progress across all 20 core DSA topics.
   * None
 
 ### 11. Trees
-* **Status:** Not Started
-* **Confidence Level:** None
+* **Status:** Practicing *(Not Started ➡️ Learning ➡️ Practicing ➡️ Strong ➡️ Interview Ready)*
+* **Confidence Level:** Medium
 * **Patterns Learned:**
-  * None
+  * BFS
+  * DFS
+  * Tree Traversal
 * **Common Mistakes:**
   * None
 * **Weak Areas:**
@@ -164,10 +177,12 @@ Track progress across all 20 core DSA topics.
   * None
 
 ### 12. BST
-* **Status:** Not Started
-* **Confidence Level:** None
+* **Status:** Practicing *(Not Started ➡️ Learning ➡️ Practicing ➡️ Strong ➡️ Interview Ready)*
+* **Confidence Level:** Medium
 * **Patterns Learned:**
-  * None
+  * Backtracking
+  * Dynamic Programming
+  * Tree Traversal
 * **Common Mistakes:**
   * None
 * **Weak Areas:**
@@ -176,10 +191,10 @@ Track progress across all 20 core DSA topics.
   * None
 
 ### 13. Heaps
-* **Status:** Not Started
-* **Confidence Level:** None
+* **Status:** Learning *(Not Started ➡️ Learning ➡️ Practicing ➡️ Strong ➡️ Interview Ready)*
+* **Confidence Level:** Low
 * **Patterns Learned:**
-  * None
+  * Heap
 * **Common Mistakes:**
   * None
 * **Weak Areas:**
@@ -188,10 +203,11 @@ Track progress across all 20 core DSA topics.
   * None
 
 ### 14. Graphs
-* **Status:** Not Started
-* **Confidence Level:** None
+* **Status:** Learning *(Not Started ➡️ Learning ➡️ Practicing ➡️ Strong ➡️ Interview Ready)*
+* **Confidence Level:** Low
 * **Patterns Learned:**
-  * None
+  * BFS
+  * DFS
 * **Common Mistakes:**
   * None
 * **Weak Areas:**
@@ -200,10 +216,10 @@ Track progress across all 20 core DSA topics.
   * None
 
 ### 15. Greedy
-* **Status:** Not Started
-* **Confidence Level:** None
+* **Status:** Practicing *(Not Started ➡️ Learning ➡️ Practicing ➡️ Strong ➡️ Interview Ready)*
+* **Confidence Level:** Medium
 * **Patterns Learned:**
-  * None
+  * Greedy
 * **Common Mistakes:**
   * None
 * **Weak Areas:**
@@ -212,10 +228,12 @@ Track progress across all 20 core DSA topics.
   * None
 
 ### 16. Dynamic Programming
-* **Status:** Not Started
-* **Confidence Level:** None
+* **Status:** Strong *(Not Started ➡️ Learning ➡️ Practicing ➡️ Strong ➡️ Interview Ready)*
+* **Confidence Level:** High
 * **Patterns Learned:**
-  * None
+  * Dynamic Programming
+  * Prefix Sum
+  * Two Pointers
 * **Common Mistakes:**
   * None
 * **Weak Areas:**
@@ -224,7 +242,7 @@ Track progress across all 20 core DSA topics.
   * None
 
 ### 17. Tries
-* **Status:** Not Started
+* **Status:** Not Started *(Not Started ➡️ Learning ➡️ Practicing ➡️ Strong ➡️ Interview Ready)*
 * **Confidence Level:** None
 * **Patterns Learned:**
   * None
@@ -236,10 +254,10 @@ Track progress across all 20 core DSA topics.
   * None
 
 ### 18. Bit Manipulation
-* **Status:** Not Started
-* **Confidence Level:** None
+* **Status:** Learning *(Not Started ➡️ Learning ➡️ Practicing ➡️ Strong ➡️ Interview Ready)*
+* **Confidence Level:** Low
 * **Patterns Learned:**
-  * None
+  * Binary Search
 * **Common Mistakes:**
   * None
 * **Weak Areas:**
@@ -248,10 +266,10 @@ Track progress across all 20 core DSA topics.
   * None
 
 ### 19. Advanced Data Structures
-* **Status:** Not Started
-* **Confidence Level:** None
+* **Status:** Learning *(Not Started ➡️ Learning ➡️ Practicing ➡️ Strong ➡️ Interview Ready)*
+* **Confidence Level:** Low
 * **Patterns Learned:**
-  * None
+  * Linked List
 * **Common Mistakes:**
   * None
 * **Weak Areas:**
@@ -260,13 +278,17 @@ Track progress across all 20 core DSA topics.
   * None
 
 ### 20. Advanced Algorithms
-* **Status:** Not Started
-* **Confidence Level:** None
+* **Status:** Practicing *(Not Started ➡️ Learning ➡️ Practicing ➡️ Strong ➡️ Interview Ready)*
+* **Confidence Level:** Medium
 * **Patterns Learned:**
-  * None
+  * Backtracking
+  * Greedy
+  * Stack
+  * Two Pointers
 * **Common Mistakes:**
   * None
 * **Weak Areas:**
   * None
 * **Problems Needing Reattempt:**
   * None
+
