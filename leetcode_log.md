@@ -2,15 +2,15 @@
 
 ## 📊 Summary Statistics
 
-* **Total Solved:** 82
+* **Total Solved:** 83
   * **Easy:** 22
-  * **Medium:** 45
+  * **Medium:** 46
   * **Hard:** 15
 * **Assistance Breakdown:**
-  * **Independent Solves:** 82
+  * **Independent Solves:** 83
   * **Hint-Assisted Solves:** 0
   * **Editorial-Assisted Solves:** 0
-* **Problems Needing Reattempt:** 1 ⚠️
+* **Problems Needing Reattempt:** 2 ⚠️
 
 ### 🧠 Pattern Analysis
 
@@ -18,7 +18,7 @@
 | :--- | :---: | :---: |
 | Hashing | 6 | Strong |
 | Two Pointers | 21 | Strong |
-| Sliding Window | 3 | Medium |
+| Sliding Window | 4 | Medium |
 | Prefix Sum | 4 | Medium |
 | Binary Search | 6 | Strong |
 | Stack | 6 | Strong |
@@ -124,6 +124,7 @@
 | 4 | Median of Two Sorted Arrays | Hard | Searching (Binary Search) | 2026-08-25 | Independent | O(log(min(M,N))) / O(1) | Yes | No |
 | 2 | Add Two Numbers | Medium | Linked Lists (Linked List) | 2026-08-25 | Independent | O(N + M) / O(1) | Yes | No |
 | 1 | Two Sum | Easy | Hashing (Hashing) | 2026-08-25 | Independent | O(N^2) / O(1) | No | Yes |
+| 2904 | Shortest and Lexicographically Smallest Beautiful Substring | Medium | Strings (Sliding Window) | 2026-08-26 | Independent | O(N^2) / O(N) | No | Yes |
 
 ---
 
@@ -537,5 +538,10 @@
 ### LeetCode #1: Two Sum
 * **Main Idea:** Double loop scanning all pairs. Brute force approach.
 * **Mistake Made:** Solved with O(N^2) brute force. Suboptimal.
-* **Reattempt Reason/Context:** Requires O(N) optimized solution
+* **Reattempt Reason/Context:** Requires optimized solution
+
+### LeetCode #2904: Shortest and Lexicographically Smallest Beautiful Substring
+* **Main Idea:** Outer loop iterates starting index, inner loop grows substring while tracking number of 1s. Keep shortest & lexicographically smallest substring with exactly k ones.
+* **Mistake Made:** Suboptimal nested loops O(N^2) time complexity. Can be optimized to O(N) using sliding window.
+* **Reattempt Reason/Context:** Requires optimized solution
 

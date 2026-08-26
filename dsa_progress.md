@@ -7,7 +7,7 @@ Track progress across all 20 core DSA topics.
 | Topic | Status | Attempted | Solved | Easy | Medium | Hard | Confidence |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | [Arrays](#arrays) | Strong | 12 | 12 | 4 | 6 | 2 | High |
-| [Strings](#strings) | Strong | 10 | 10 | 3 | 6 | 1 | High |
+| [Strings](#strings) | Strong | 11 | 11 | 3 | 7 | 1 | High |
 | [Hashing](#hashing) | Strong | 6 | 6 | 2 | 4 | 0 | High |
 | [Linked Lists](#linked-lists) | Strong | 9 | 9 | 2 | 5 | 2 | High |
 | [Stacks](#stacks) | Learning | 2 | 2 | 1 | 0 | 1 | Low |
@@ -55,11 +55,11 @@ Track progress across all 20 core DSA topics.
   * Stack
   * Two Pointers
 * **Common Mistakes:**
-  * None
+  * Suboptimal nested loops O(N^2) time complexity. Can be optimized to O(N) using sliding window.
 * **Weak Areas:**
-  * None
+  * Suboptimal sliding window simulation. Need to implement $O(N)$ sliding window.
 * **Problems Needing Reattempt:**
-  * None
+  * LeetCode #2904 Shortest and Lexicographically Smallest Beautiful Substring
 
 ### 3. Hashing
 * **Status:** Strong *(Not Started ➡️ Learning ➡️ Practicing ➡️ Strong ➡️ Interview Ready)*

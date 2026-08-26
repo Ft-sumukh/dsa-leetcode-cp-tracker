@@ -7,6 +7,7 @@ This is a central queue of problems that you attempted but did not solve indepen
 | Problem Source | ID / # | Problem Name | Difficulty | Date Added | Current Stage | Note / Why it needs reattempt | Target Date |
 | :---: | :---: | :--- | :---: | :---: | :---: | :--- | :---: |
 | LeetCode | 1 | Two Sum | Easy | 2026-08-25 | Attempted | Solved with brute force O(N^2) in C. Needs to be re-solved in O(N) time with hash map. | 2026-08-26 |
+| LeetCode | 2904 | Shortest and Lexicographically Smallest Beautiful Substring | Medium | 2026-08-26 | Attempted | Solved with brute force O(N^2) in C++. Needs to be optimized to O(N) time using sliding window. | 2026-08-27 |
 
 ---
 
