@@ -2,12 +2,12 @@
 
 ## 📊 Summary Statistics
 
-* **Total Solved:** 83
+* **Total Solved:** 84
   * **Easy:** 22
-  * **Medium:** 46
+  * **Medium:** 47
   * **Hard:** 15
 * **Assistance Breakdown:**
-  * **Independent Solves:** 83
+  * **Independent Solves:** 84
   * **Hint-Assisted Solves:** 0
   * **Editorial-Assisted Solves:** 0
 * **Problems Needing Reattempt:** 2 ⚠️
@@ -28,7 +28,7 @@
 | BFS | 2 | Weak |
 | DFS | 2 | Weak |
 | Heap | 2 | Weak |
-| Greedy | 5 | Medium |
+| Greedy | 6 | Strong |
 | Backtracking | 6 | Strong |
 | Dynamic Programming | 8 | Strong |
 | Graph Algorithms | 2 | Weak |
@@ -125,6 +125,7 @@
 | 2 | Add Two Numbers | Medium | Linked Lists (Linked List) | 2026-08-25 | Independent | O(N + M) / O(1) | Yes | No |
 | 1 | Two Sum | Easy | Hashing (Hashing) | 2026-08-25 | Independent | O(N^2) / O(1) | No | Yes |
 | 2904 | Shortest and Lexicographically Smallest Beautiful Substring | Medium | Strings (Sliding Window) | 2026-08-26 | Independent | O(N^2) / O(N) | No | Yes |
+| 3720 | Lexicographically Smallest Permutation Greater Than Target | Medium | Strings (Greedy) | 2026-08-27 | Independent | O(N^2) / O(N) | Yes | No |
 
 ---
 
@@ -544,4 +545,9 @@
 * **Main Idea:** Outer loop iterates starting index, inner loop grows substring while tracking number of 1s. Keep shortest & lexicographically smallest substring with exactly k ones.
 * **Mistake Made:** Suboptimal nested loops O(N^2) time complexity. Can be optimized to O(N) using sliding window.
 * **Reattempt Reason/Context:** Requires optimized solution
+
+### LeetCode #3720: Lexicographically Smallest Permutation Greater Than Target
+* **Main Idea:** Iterate backward from right to left. At each position i, check if the available characters in s can cover the target prefix target[0...i-1]. If yes, replace target[i] with the smallest available character greater than it, and fill the remaining suffix in sorted order.
+* **Mistake Made:** None
+* **Reattempt Reason/Context:** N/A
 
