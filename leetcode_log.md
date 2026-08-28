@@ -2,12 +2,12 @@
 
 ## 📊 Summary Statistics
 
-* **Total Solved:** 84
+* **Total Solved:** 85
   * **Easy:** 22
   * **Medium:** 47
-  * **Hard:** 15
+  * **Hard:** 16
 * **Assistance Breakdown:**
-  * **Independent Solves:** 84
+  * **Independent Solves:** 85
   * **Hint-Assisted Solves:** 0
   * **Editorial-Assisted Solves:** 0
 * **Problems Needing Reattempt:** 2 ⚠️
@@ -29,7 +29,7 @@
 | DFS | 2 | Weak |
 | Heap | 2 | Weak |
 | Greedy | 6 | Strong |
-| Backtracking | 6 | Strong |
+| Backtracking | 7 | Strong |
 | Dynamic Programming | 8 | Strong |
 | Graph Algorithms | 2 | Weak |
 | Union Find | 0 | - |
@@ -126,6 +126,7 @@
 | 1 | Two Sum | Easy | Hashing (Hashing) | 2026-08-25 | Independent | O(N^2) / O(1) | No | Yes |
 | 2904 | Shortest and Lexicographically Smallest Beautiful Substring | Medium | Strings (Sliding Window) | 2026-08-26 | Independent | O(N^2) / O(N) | No | Yes |
 | 3720 | Lexicographically Smallest Permutation Greater Than Target | Medium | Strings (Greedy) | 2026-08-27 | Independent | O(N^2) / O(N) | Yes | No |
+| 3734 | Lexicographically Smallest Palindromic Permutation Greater Than Target | Hard | Strings (Backtracking) | 2026-08-28 | Independent | O(N) / O(N) | Yes | No |
 
 ---
 
@@ -548,6 +549,11 @@
 
 ### LeetCode #3720: Lexicographically Smallest Permutation Greater Than Target
 * **Main Idea:** Iterate backward from right to left. At each position i, check if the available characters in s can cover the target prefix target[0...i-1]. If yes, replace target[i] with the smallest available character greater than it, and fill the remaining suffix in sorted order.
+* **Mistake Made:** None
+* **Reattempt Reason/Context:** N/A
+
+### LeetCode #3734: Lexicographically Smallest Palindromic Permutation Greater Than Target
+* **Main Idea:** Check if a palindromic permutation is possible (at most 1 odd count). First check if matching the target's prefix exactly is possible and yields a larger suffix. If not, backtrack from right-to-left to find the first index that can be incremented to a strictly greater available character, and fill the remaining indices greedily with the smallest available characters.
 * **Mistake Made:** None
 * **Reattempt Reason/Context:** N/A
 
