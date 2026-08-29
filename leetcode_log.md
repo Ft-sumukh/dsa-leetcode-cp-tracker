@@ -4,8 +4,8 @@
 
 * **Total Solved:** 85
   * **Easy:** 22
-  * **Medium:** 47
-  * **Hard:** 16
+  * **Medium:** 48
+  * **Hard:** 15
 * **Assistance Breakdown:**
   * **Independent Solves:** 85
   * **Hint-Assisted Solves:** 0
@@ -17,7 +17,7 @@
 | Pattern | Solved Count | Strength Level (Weak / Medium / Strong) |
 | :--- | :---: | :---: |
 | Hashing | 6 | Strong |
-| Two Pointers | 21 | Strong |
+| Two Pointers | 22 | Strong |
 | Sliding Window | 4 | Medium |
 | Prefix Sum | 4 | Medium |
 | Binary Search | 6 | Strong |
@@ -29,7 +29,7 @@
 | DFS | 2 | Weak |
 | Heap | 2 | Weak |
 | Greedy | 6 | Strong |
-| Backtracking | 7 | Strong |
+| Backtracking | 6 | Strong |
 | Dynamic Programming | 8 | Strong |
 | Graph Algorithms | 2 | Weak |
 | Union Find | 0 | - |
@@ -126,7 +126,7 @@
 | 1 | Two Sum | Easy | Hashing (Hashing) | 2026-08-25 | Independent | O(N^2) / O(1) | No | Yes |
 | 2904 | Shortest and Lexicographically Smallest Beautiful Substring | Medium | Strings (Sliding Window) | 2026-08-26 | Independent | O(N^2) / O(N) | No | Yes |
 | 3720 | Lexicographically Smallest Permutation Greater Than Target | Medium | Strings (Greedy) | 2026-08-27 | Independent | O(N^2) / O(N) | Yes | No |
-| 3734 | Lexicographically Smallest Palindromic Permutation Greater Than Target | Hard | Strings (Backtracking) | 2026-08-28 | Independent | O(N) / O(N) | Yes | No |
+| 2948 | Make Lexicographically Smallest Array by Swapping Elements | Medium | Sorting (Sorting) | 2026-08-29 | Independent | O(N log N) / O(N) | Yes | No |
 
 ---
 
@@ -552,8 +552,8 @@
 * **Mistake Made:** None
 * **Reattempt Reason/Context:** N/A
 
-### LeetCode #3734: Lexicographically Smallest Palindromic Permutation Greater Than Target
-* **Main Idea:** Check if a palindromic permutation is possible (at most 1 odd count). First check if matching the target's prefix exactly is possible and yields a larger suffix. If not, backtrack from right-to-left to find the first index that can be incremented to a strictly greater available character, and fill the remaining indices greedily with the smallest available characters.
+### LeetCode #2948: Make Lexicographically Smallest Array by Swapping Elements
+* **Main Idea:** Sort copy of array. Group numbers where adjacent difference is <= limit (creating swap components). Walk original array and replace elements with smallest available in their component group.
 * **Mistake Made:** None
 * **Reattempt Reason/Context:** N/A
 
