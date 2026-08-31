@@ -6,10 +6,10 @@ Track progress across all 20 core DSA topics.
 
 | Topic | Status | Attempted | Solved | Easy | Medium | Hard | Confidence |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| [Arrays](#arrays) | Strong | 13 | 13 | 4 | 7 | 2 | High |
-| [Strings](#strings) | Strong | 13 | 13 | 3 | 8 | 2 | High |
+| [Arrays](#arrays) | Strong | 12 | 12 | 4 | 6 | 2 | High |
+| [Strings](#strings) | Strong | 12 | 12 | 3 | 8 | 1 | High |
 | [Hashing](#hashing) | Strong | 6 | 6 | 2 | 4 | 0 | High |
-| [Linked Lists](#linked-lists) | Strong | 9 | 9 | 2 | 5 | 2 | High |
+| [Linked Lists](#linked-lists) | Strong | 10 | 10 | 2 | 6 | 2 | High |
 | [Stacks](#stacks) | Learning | 2 | 2 | 1 | 0 | 1 | Low |
 | [Queues](#queues) | Not Started | 0 | 0 | 0 | 0 | 0 | None |
 | [Recursion](#recursion) | Learning | 1 | 1 | 0 | 1 | 0 | Low |

@@ -8,13 +8,13 @@ Welcome! This repository tracks your journey to becoming a strong problem solver
 
 | Category | Solved / Total | Easy | Medium | Hard | Main Focus / Next Goal |
 | :--- | :---: | :---: | :---: | :---: | :--- |
-| **DSA Progress** | 87 / —  | 22 | 49 | 16 | Initialize topics & start practicing basics |
-| **LeetCode** | 87 | 22 | 49 | 16 | Establish a daily habit |
+| **DSA Progress** | 86 / —  | 22 | 49 | 15 | Initialize topics & start practicing basics |
+| **LeetCode** | 86 | 22 | 49 | 15 | Establish a daily habit |
 | **Competitive Programming** | 0 Contests | — | — | — | Establish baseline ratings |
 
 ### 📈 Overall Totals
-* **Total Solved:** 87
-* **Independent Solves:** 87
+* **Total Solved:** 86
+* **Independent Solves:** 86
 * **Hint-Assisted Solves:** 0
 * **Editorial-Assisted Solves:** 0
 * **Problems Needing Reattempt:** 2 ⚠️
