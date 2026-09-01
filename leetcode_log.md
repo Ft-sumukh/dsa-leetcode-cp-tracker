@@ -2,12 +2,12 @@
 
 ## 📊 Summary Statistics
 
-* **Total Solved:** 86
+* **Total Solved:** 87
   * **Easy:** 22
-  * **Medium:** 49
+  * **Medium:** 50
   * **Hard:** 15
 * **Assistance Breakdown:**
-  * **Independent Solves:** 86
+  * **Independent Solves:** 87
   * **Hint-Assisted Solves:** 0
   * **Editorial-Assisted Solves:** 0
 * **Problems Needing Reattempt:** 2 ⚠️
@@ -25,13 +25,13 @@
 | Monotonic Stack | 0 | - |
 | Linked List | 8 | Strong |
 | Tree Traversal | 4 | Medium |
-| BFS | 2 | Weak |
+| BFS | 3 | Medium |
 | DFS | 2 | Weak |
 | Heap | 2 | Weak |
 | Greedy | 6 | Strong |
 | Backtracking | 6 | Strong |
 | Dynamic Programming | 8 | Strong |
-| Graph Algorithms | 2 | Weak |
+| Graph Algorithms | 3 | Medium |
 | Union Find | 0 | - |
 | Trie | 0 | - |
 | Segment Tree | 0 | - |
@@ -128,6 +128,7 @@
 | 3720 | Lexicographically Smallest Permutation Greater Than Target | Medium | Strings (Greedy) | 2026-08-27 | Independent | O(N^2) / O(N) | Yes | No |
 | 2948 | Make Lexicographically Smallest Array by Swapping Elements | Medium | Sorting (Sorting) | 2026-08-29 | Independent | O(N log N) / O(N) | Yes | No |
 | 2058 | Find the Minimum and Maximum Number of Nodes Between Critical Points | Medium | Linked Lists (Linked List) | 2026-08-31 | Independent | O(N) / O(1) | Yes | No |
+| 3568 | Minimum Moves to Clean the Classroom | Medium | Graphs (BFS) | 2026-09-01 | Independent | O(M * N * 2^K) / O(M * N * 2^K) | Yes | No |
 
 ---
 
@@ -560,6 +561,11 @@
 
 ### LeetCode #2058: Find the Minimum and Maximum Number of Nodes Between Critical Points
 * **Main Idea:** Single pass traversal. Check local maxima/minima using prev, cur, and next node values. Track first and last critical indices to compute max distance, and track adjacent difference to compute min distance.
+* **Mistake Made:** None
+* **Reattempt Reason/Context:** N/A
+
+### LeetCode #3568: Minimum Moves to Clean the Classroom
+* **Main Idea:** Multi-state BFS tracking coordinates (r, c), remaining energy e, and bitmask of collected litter. Energy resets to maximum on 'R' cells, and bitmask updates on 'L' cells.
 * **Mistake Made:** None
 * **Reattempt Reason/Context:** N/A
 
