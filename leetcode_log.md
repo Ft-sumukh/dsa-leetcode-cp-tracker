@@ -2,12 +2,12 @@
 
 ## 📊 Summary Statistics
 
-* **Total Solved:** 87
-  * **Easy:** 22
+* **Total Solved:** 88
+  * **Easy:** 23
   * **Medium:** 50
   * **Hard:** 15
 * **Assistance Breakdown:**
-  * **Independent Solves:** 87
+  * **Independent Solves:** 88
   * **Hint-Assisted Solves:** 0
   * **Editorial-Assisted Solves:** 0
 * **Problems Needing Reattempt:** 2 ⚠️
@@ -28,7 +28,7 @@
 | BFS | 3 | Medium |
 | DFS | 2 | Weak |
 | Heap | 2 | Weak |
-| Greedy | 6 | Strong |
+| Greedy | 7 | Strong |
 | Backtracking | 6 | Strong |
 | Dynamic Programming | 8 | Strong |
 | Graph Algorithms | 3 | Medium |
@@ -129,6 +129,7 @@
 | 2948 | Make Lexicographically Smallest Array by Swapping Elements | Medium | Sorting (Sorting) | 2026-08-29 | Independent | O(N log N) / O(N) | Yes | No |
 | 2058 | Find the Minimum and Maximum Number of Nodes Between Critical Points | Medium | Linked Lists (Linked List) | 2026-08-31 | Independent | O(N) / O(1) | Yes | No |
 | 3568 | Minimum Moves to Clean the Classroom | Medium | Graphs (BFS) | 2026-09-01 | Independent | O(M * N * 2^K) / O(M * N * 2^K) | Yes | No |
+| 3875 | Construct Uniform Parity Array I | Easy | Math (Greedy) | 2026-09-02 | Independent | O(1) / O(1) | Yes | No |
 
 ---
 
@@ -566,6 +567,11 @@
 
 ### LeetCode #3568: Minimum Moves to Clean the Classroom
 * **Main Idea:** Multi-state BFS tracking coordinates (r, c), remaining energy e, and bitmask of collected litter. Energy resets to maximum on 'R' cells, and bitmask updates on 'L' cells.
+* **Mistake Made:** None
+* **Reattempt Reason/Context:** N/A
+
+### LeetCode #3875: Construct Uniform Parity Array I
+* **Main Idea:** Brain teaser math problem. Since odd - even = odd and even - odd = odd, any mixed parity array can be transformed to all odds, and same-parity arrays already satisfy the condition. The answer is always true.
 * **Mistake Made:** None
 * **Reattempt Reason/Context:** N/A
 

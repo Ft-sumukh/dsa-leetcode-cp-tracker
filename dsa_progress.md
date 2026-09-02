@@ -25,7 +25,7 @@ Track progress across all 20 core DSA topics.
 | [Tries](#tries) | Not Started | 0 | 0 | 0 | 0 | 0 | None |
 | [Bit Manipulation](#bit-manipulation) | Learning | 1 | 1 | 0 | 1 | 0 | Low |
 | [Advanced Data Structures](#advanced-data-structures) | Learning | 1 | 1 | 0 | 1 | 0 | Low |
-| [Advanced Algorithms](#advanced-algorithms) | Practicing | 5 | 5 | 3 | 1 | 1 | Medium |
+| [Advanced Algorithms](#advanced-algorithms) | Strong | 6 | 6 | 4 | 1 | 1 | High |
 
 ---
 
@@ -278,8 +278,8 @@ Track progress across all 20 core DSA topics.
   * None
 
 ### 20. Advanced Algorithms
-* **Status:** Practicing *(Not Started ➡️ Learning ➡️ Practicing ➡️ Strong ➡️ Interview Ready)*
-* **Confidence Level:** Medium
+* **Status:** Strong *(Not Started ➡️ Learning ➡️ Practicing ➡️ Strong ➡️ Interview Ready)*
+* **Confidence Level:** High
 * **Patterns Learned:**
   * Backtracking
   * Greedy
