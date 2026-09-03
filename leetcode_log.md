@@ -2,12 +2,12 @@
 
 ## 📊 Summary Statistics
 
-* **Total Solved:** 88
+* **Total Solved:** 89
   * **Easy:** 23
-  * **Medium:** 50
+  * **Medium:** 51
   * **Hard:** 15
 * **Assistance Breakdown:**
-  * **Independent Solves:** 88
+  * **Independent Solves:** 89
   * **Hint-Assisted Solves:** 0
   * **Editorial-Assisted Solves:** 0
 * **Problems Needing Reattempt:** 2 ⚠️
@@ -28,7 +28,7 @@
 | BFS | 3 | Medium |
 | DFS | 2 | Weak |
 | Heap | 2 | Weak |
-| Greedy | 7 | Strong |
+| Greedy | 8 | Strong |
 | Backtracking | 6 | Strong |
 | Dynamic Programming | 8 | Strong |
 | Graph Algorithms | 3 | Medium |
@@ -130,6 +130,7 @@
 | 2058 | Find the Minimum and Maximum Number of Nodes Between Critical Points | Medium | Linked Lists (Linked List) | 2026-08-31 | Independent | O(N) / O(1) | Yes | No |
 | 3568 | Minimum Moves to Clean the Classroom | Medium | Graphs (BFS) | 2026-09-01 | Independent | O(M * N * 2^K) / O(M * N * 2^K) | Yes | No |
 | 3875 | Construct Uniform Parity Array I | Easy | Math (Greedy) | 2026-09-02 | Independent | O(1) / O(1) | Yes | No |
+| 3876 | Construct Uniform Parity Array II | Medium | Math (Greedy) | 2026-09-03 | Independent | O(N) / O(1) | Yes | No |
 
 ---
 
@@ -572,6 +573,11 @@
 
 ### LeetCode #3875: Construct Uniform Parity Array I
 * **Main Idea:** Brain teaser math problem. Since odd - even = odd and even - odd = odd, any mixed parity array can be transformed to all odds, and same-parity arrays already satisfy the condition. The answer is always true.
+* **Mistake Made:** None
+* **Reattempt Reason/Context:** N/A
+
+### LeetCode #3876: Construct Uniform Parity Array II
+* **Main Idea:** Single pass tracking min element and odd parity presence. If mixed parity exists, the minimum element must be odd so that all even elements can subtract it; otherwise if all elements are even, they already match. Condition is (xmin & 1) == odd.
 * **Mistake Made:** None
 * **Reattempt Reason/Context:** N/A
 
