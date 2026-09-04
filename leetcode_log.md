@@ -2,12 +2,12 @@
 
 ## 📊 Summary Statistics
 
-* **Total Solved:** 89
-  * **Easy:** 23
+* **Total Solved:** 90
+  * **Easy:** 24
   * **Medium:** 51
   * **Hard:** 15
 * **Assistance Breakdown:**
-  * **Independent Solves:** 89
+  * **Independent Solves:** 90
   * **Hint-Assisted Solves:** 0
   * **Editorial-Assisted Solves:** 0
 * **Problems Needing Reattempt:** 2 ⚠️
@@ -19,7 +19,7 @@
 | Hashing | 6 | Strong |
 | Two Pointers | 22 | Strong |
 | Sliding Window | 4 | Medium |
-| Prefix Sum | 4 | Medium |
+| Prefix Sum | 5 | Medium |
 | Binary Search | 6 | Strong |
 | Stack | 6 | Strong |
 | Monotonic Stack | 0 | - |
@@ -131,6 +131,7 @@
 | 3568 | Minimum Moves to Clean the Classroom | Medium | Graphs (BFS) | 2026-09-01 | Independent | O(M * N * 2^K) / O(M * N * 2^K) | Yes | No |
 | 3875 | Construct Uniform Parity Array I | Easy | Math (Greedy) | 2026-09-02 | Independent | O(1) / O(1) | Yes | No |
 | 3876 | Construct Uniform Parity Array II | Medium | Math (Greedy) | 2026-09-03 | Independent | O(N) / O(1) | Yes | No |
+| 3903 | Smallest Stable Index I | Easy | Arrays (Prefix Sum) | 2026-09-04 | Independent | O(N) / O(N) | Yes | No |
 
 ---
 
@@ -578,6 +579,11 @@
 
 ### LeetCode #3876: Construct Uniform Parity Array II
 * **Main Idea:** Single pass tracking min element and odd parity presence. If mixed parity exists, the minimum element must be odd so that all even elements can subtract it; otherwise if all elements are even, they already match. Condition is (xmin & 1) == odd.
+* **Mistake Made:** None
+* **Reattempt Reason/Context:** N/A
+
+### LeetCode #3903: Smallest Stable Index I
+* **Main Idea:** Precompute suffix minimums from right to left. Then traverse from left to right tracking running prefix maximum and check if prefix_max - suffix_min <= k. Return first index satisfying condition.
 * **Mistake Made:** None
 * **Reattempt Reason/Context:** N/A
 
