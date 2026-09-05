@@ -2,12 +2,12 @@
 
 ## 📊 Summary Statistics
 
-* **Total Solved:** 90
+* **Total Solved:** 91
   * **Easy:** 24
-  * **Medium:** 51
+  * **Medium:** 52
   * **Hard:** 15
 * **Assistance Breakdown:**
-  * **Independent Solves:** 90
+  * **Independent Solves:** 91
   * **Hint-Assisted Solves:** 0
   * **Editorial-Assisted Solves:** 0
 * **Problems Needing Reattempt:** 2 ⚠️
@@ -28,7 +28,7 @@
 | BFS | 3 | Medium |
 | DFS | 2 | Weak |
 | Heap | 2 | Weak |
-| Greedy | 8 | Strong |
+| Greedy | 9 | Strong |
 | Backtracking | 6 | Strong |
 | Dynamic Programming | 8 | Strong |
 | Graph Algorithms | 3 | Medium |
@@ -132,6 +132,7 @@
 | 3875 | Construct Uniform Parity Array I | Easy | Math (Greedy) | 2026-09-02 | Independent | O(1) / O(1) | Yes | No |
 | 3876 | Construct Uniform Parity Array II | Medium | Math (Greedy) | 2026-09-03 | Independent | O(N) / O(1) | Yes | No |
 | 3903 | Smallest Stable Index I | Easy | Arrays (Prefix Sum) | 2026-09-04 | Independent | O(N) / O(N) | Yes | No |
+| 3904 | Smallest Stable Index II | Medium | Arrays (Greedy) | 2026-09-05 | Independent | O(N) / O(1) | Yes | No |
 
 ---
 
@@ -584,6 +585,11 @@
 
 ### LeetCode #3903: Smallest Stable Index I
 * **Main Idea:** Precompute suffix minimums from right to left. Then traverse from left to right tracking running prefix maximum and check if prefix_max - suffix_min <= k. Return first index satisfying condition.
+* **Mistake Made:** None
+* **Reattempt Reason/Context:** N/A
+
+### LeetCode #3904: Smallest Stable Index II
+* **Main Idea:** Single pass candidate tracking with O(1) space. Maintain candidate index cand and its prefix max cMax. If any element nums[i] < cMax - k, candidate is invalidated and reset to i + 1.
 * **Mistake Made:** None
 * **Reattempt Reason/Context:** N/A
 
