@@ -2,12 +2,12 @@
 
 ## 📊 Summary Statistics
 
-* **Total Solved:** 91
+* **Total Solved:** 92
   * **Easy:** 24
   * **Medium:** 52
-  * **Hard:** 15
+  * **Hard:** 16
 * **Assistance Breakdown:**
-  * **Independent Solves:** 91
+  * **Independent Solves:** 92
   * **Hint-Assisted Solves:** 0
   * **Editorial-Assisted Solves:** 0
 * **Problems Needing Reattempt:** 2 ⚠️
@@ -30,7 +30,7 @@
 | Heap | 2 | Weak |
 | Greedy | 9 | Strong |
 | Backtracking | 6 | Strong |
-| Dynamic Programming | 8 | Strong |
+| Dynamic Programming | 9 | Strong |
 | Graph Algorithms | 3 | Medium |
 | Union Find | 0 | - |
 | Trie | 0 | - |
@@ -133,6 +133,7 @@
 | 3876 | Construct Uniform Parity Array II | Medium | Math (Greedy) | 2026-09-03 | Independent | O(N) / O(1) | Yes | No |
 | 3903 | Smallest Stable Index I | Easy | Arrays (Prefix Sum) | 2026-09-04 | Independent | O(N) / O(N) | Yes | No |
 | 3904 | Smallest Stable Index II | Medium | Arrays (Greedy) | 2026-09-05 | Independent | O(N) / O(1) | Yes | No |
+| 115 | Distinct Subsequences | Hard | Dynamic Programming (Dynamic Programming) | 2026-09-06 | Independent | O(M * N) / O(M * N) | Yes | No |
 
 ---
 
@@ -590,6 +591,11 @@
 
 ### LeetCode #3904: Smallest Stable Index II
 * **Main Idea:** Single pass candidate tracking with O(1) space. Maintain candidate index cand and its prefix max cMax. If any element nums[i] < cMax - k, candidate is invalidated and reset to i + 1.
+* **Mistake Made:** None
+* **Reattempt Reason/Context:** N/A
+
+### LeetCode #115: Distinct Subsequences
+* **Main Idea:** 2D Dynamic Programming. dp[i][j] stores number of distinct subsequences of s[i...] matching t[j...]. If s[i] == t[j], add ways from both matching (dp[i+1][j+1]) and skipping (dp[i+1][j]); else only skip (dp[i+1][j]).
 * **Mistake Made:** None
 * **Reattempt Reason/Context:** N/A
 
