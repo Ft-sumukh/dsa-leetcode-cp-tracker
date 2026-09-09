@@ -2,12 +2,12 @@
 
 ## 📊 Summary Statistics
 
-* **Total Solved:** 92
+* **Total Solved:** 94
   * **Easy:** 24
-  * **Medium:** 52
-  * **Hard:** 16
+  * **Medium:** 53
+  * **Hard:** 17
 * **Assistance Breakdown:**
-  * **Independent Solves:** 92
+  * **Independent Solves:** 94
   * **Hint-Assisted Solves:** 0
   * **Editorial-Assisted Solves:** 0
 * **Problems Needing Reattempt:** 2 ⚠️
@@ -28,9 +28,9 @@
 | BFS | 3 | Medium |
 | DFS | 2 | Weak |
 | Heap | 2 | Weak |
-| Greedy | 9 | Strong |
+| Greedy | 10 | Strong |
 | Backtracking | 6 | Strong |
-| Dynamic Programming | 9 | Strong |
+| Dynamic Programming | 10 | Strong |
 | Graph Algorithms | 3 | Medium |
 | Union Find | 0 | - |
 | Trie | 0 | - |
@@ -134,6 +134,8 @@
 | 3903 | Smallest Stable Index I | Easy | Arrays (Prefix Sum) | 2026-09-04 | Independent | O(N) / O(N) | Yes | No |
 | 3904 | Smallest Stable Index II | Medium | Arrays (Greedy) | 2026-09-05 | Independent | O(N) / O(1) | Yes | No |
 | 115 | Distinct Subsequences | Hard | Dynamic Programming (Dynamic Programming) | 2026-09-06 | Independent | O(M * N) / O(M * N) | Yes | No |
+| 940 | Distinct Subsequences II | Hard | Dynamic Programming (Dynamic Programming) | 2026-09-07 | Independent | O(N) / O(1) | Yes | No |
+| 3871 | Count Commas in Range II | Medium | Math (Greedy) | 2026-09-09 | Independent | O(log N) / O(1) | Yes | No |
 
 ---
 
@@ -596,6 +598,16 @@
 
 ### LeetCode #115: Distinct Subsequences
 * **Main Idea:** 2D Dynamic Programming. dp[i][j] stores number of distinct subsequences of s[i...] matching t[j...]. If s[i] == t[j], add ways from both matching (dp[i+1][j+1]) and skipping (dp[i+1][j]); else only skip (dp[i+1][j]).
+* **Mistake Made:** None
+* **Reattempt Reason/Context:** N/A
+
+### LeetCode #940: Distinct Subsequences II
+* **Main Idea:** 1D DP with character tracking. Maintain total distinct subsequences 'tot' and previous count ending at character 'c'. For each character, new subsequences added equal (1 + tot - dp[c]), and update total modulo 1e9+7.
+* **Mistake Made:** None
+* **Reattempt Reason/Context:** N/A
+
+### LeetCode #3871: Count Commas in Range II
+* **Main Idea:** Mathematical threshold counting. Iterate powers of 1000 (1,000; 1,000,000; etc.) up to n, accumulating (n - p + 1) for each threshold crossed.
 * **Mistake Made:** None
 * **Reattempt Reason/Context:** N/A
 

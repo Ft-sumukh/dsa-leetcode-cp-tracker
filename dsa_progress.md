@@ -21,11 +21,11 @@ Track progress across all 20 core DSA topics.
 | [Heaps](#heaps) | Learning | 1 | 1 | 0 | 1 | 0 | Low |
 | [Graphs](#graphs) | Practicing | 3 | 3 | 0 | 3 | 0 | Medium |
 | [Greedy](#greedy) | Practicing | 3 | 3 | 1 | 2 | 0 | Medium |
-| [Dynamic Programming](#dynamic-programming) | Strong | 11 | 11 | 2 | 3 | 6 | High |
+| [Dynamic Programming](#dynamic-programming) | Strong | 12 | 12 | 2 | 3 | 7 | High |
 | [Tries](#tries) | Not Started | 0 | 0 | 0 | 0 | 0 | None |
 | [Bit Manipulation](#bit-manipulation) | Learning | 1 | 1 | 0 | 1 | 0 | Low |
 | [Advanced Data Structures](#advanced-data-structures) | Learning | 1 | 1 | 0 | 1 | 0 | Low |
-| [Advanced Algorithms](#advanced-algorithms) | Strong | 7 | 7 | 4 | 2 | 1 | High |
+| [Advanced Algorithms](#advanced-algorithms) | Strong | 8 | 8 | 4 | 3 | 1 | High |
 
 ---
 
