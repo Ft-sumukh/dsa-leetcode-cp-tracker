@@ -16,7 +16,7 @@ Track progress across all 20 core DSA topics.
 | [Backtracking](#backtracking) | Practicing | 4 | 4 | 0 | 3 | 1 | Medium |
 | [Sorting](#sorting) | Practicing | 4 | 4 | 0 | 4 | 0 | Medium |
 | [Searching](#searching) | Practicing | 4 | 4 | 1 | 2 | 1 | Medium |
-| [Trees](#trees) | Practicing | 5 | 5 | 3 | 1 | 1 | Medium |
+| [Trees](#trees) | Strong | 6 | 6 | 3 | 2 | 1 | High |
 | [BST](#bst) | Practicing | 3 | 3 | 0 | 3 | 0 | Medium |
 | [Heaps](#heaps) | Learning | 1 | 1 | 0 | 1 | 0 | Low |
 | [Graphs](#graphs) | Practicing | 3 | 3 | 0 | 3 | 0 | Medium |
@@ -165,8 +165,8 @@ Track progress across all 20 core DSA topics.
   * None
 
 ### 11. Trees
-* **Status:** Practicing *(Not Started ➡️ Learning ➡️ Practicing ➡️ Strong ➡️ Interview Ready)*
-* **Confidence Level:** Medium
+* **Status:** Strong *(Not Started ➡️ Learning ➡️ Practicing ➡️ Strong ➡️ Interview Ready)*
+* **Confidence Level:** High
 * **Patterns Learned:**
   * BFS
   * DFS
