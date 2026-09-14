@@ -25,7 +25,7 @@ Track progress across all 20 core DSA topics.
 | [Tries](#tries) | Not Started | 0 | 0 | 0 | 0 | 0 | None |
 | [Bit Manipulation](#bit-manipulation) | Learning | 1 | 1 | 0 | 1 | 0 | Low |
 | [Advanced Data Structures](#advanced-data-structures) | Learning | 1 | 1 | 0 | 1 | 0 | Low |
-| [Advanced Algorithms](#advanced-algorithms) | Strong | 8 | 8 | 4 | 3 | 1 | High |
+| [Advanced Algorithms](#advanced-algorithms) | Strong | 9 | 9 | 5 | 3 | 1 | High |
 
 ---
 

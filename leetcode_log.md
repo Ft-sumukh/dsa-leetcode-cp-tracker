@@ -2,12 +2,12 @@
 
 ## 📊 Summary Statistics
 
-* **Total Solved:** 96
-  * **Easy:** 25
+* **Total Solved:** 97
+  * **Easy:** 26
   * **Medium:** 54
   * **Hard:** 17
 * **Assistance Breakdown:**
-  * **Independent Solves:** 96
+  * **Independent Solves:** 97
   * **Hint-Assisted Solves:** 0
   * **Editorial-Assisted Solves:** 0
 * **Problems Needing Reattempt:** 2 ⚠️
@@ -28,7 +28,7 @@
 | BFS | 3 | Medium |
 | DFS | 3 | Medium |
 | Heap | 2 | Weak |
-| Greedy | 10 | Strong |
+| Greedy | 11 | Strong |
 | Backtracking | 6 | Strong |
 | Dynamic Programming | 10 | Strong |
 | Graph Algorithms | 3 | Medium |
@@ -138,6 +138,7 @@
 | 3871 | Count Commas in Range II | Medium | Math (Greedy) | 2026-09-09 | Independent | O(log N) / O(1) | Yes | No |
 | 2265 | Count Nodes Equal to Average of Subtree | Medium | Trees (DFS) | 2026-09-10 | Independent | O(N) / O(H) | Yes | No |
 | 3483 | Unique 3-Digit Even Numbers | Easy | Hashing (Hashing) | 2026-09-11 | Independent | O(N) / O(1) | Yes | No |
+| 836 | Rectangle Overlap | Easy | Math (Greedy) | 2026-09-14 | Independent | O(1) / O(1) | Yes | No |
 
 ---
 
@@ -389,7 +390,7 @@
 * **Reattempt Reason/Context:** N/A
 
 ### LeetCode #24: Swap Nodes in Pairs
-* **Main Idea:** Iterative swapping of pairs with temporary pointer adjustments.
+* **Main Idea:** Iterative swapping of pairs with average pointer adjustments.
 * **Mistake Made:** None
 * **Reattempt Reason/Context:** N/A
 
@@ -620,6 +621,11 @@
 
 ### LeetCode #3483: Unique 3-Digit Even Numbers
 * **Main Idea:** Count digit frequencies, then iterate through all valid 3-digit even numbers (hundreds 1-9, tens 0-9, units 0,2,4,6,8) and verify sufficient digit availability in O(1) time.
+* **Mistake Made:** None
+* **Reattempt Reason/Context:** N/A
+
+### LeetCode #836: Rectangle Overlap
+* **Main Idea:** Check for separation along X and Y axes. Two axis-aligned rectangles overlap if and only if they overlap in both dimensions: !(rec1[2] <= rec2[0] || rec1[0] >= rec2[2] || rec1[3] <= rec2[1] || rec1[1] >= rec2[3]).
 * **Mistake Made:** None
 * **Reattempt Reason/Context:** N/A
 
