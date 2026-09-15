@@ -2,12 +2,12 @@
 
 ## 📊 Summary Statistics
 
-* **Total Solved:** 97
+* **Total Solved:** 98
   * **Easy:** 26
   * **Medium:** 54
-  * **Hard:** 17
+  * **Hard:** 18
 * **Assistance Breakdown:**
-  * **Independent Solves:** 97
+  * **Independent Solves:** 98
   * **Hint-Assisted Solves:** 0
   * **Editorial-Assisted Solves:** 0
 * **Problems Needing Reattempt:** 2 ⚠️
@@ -28,7 +28,7 @@
 | BFS | 3 | Medium |
 | DFS | 3 | Medium |
 | Heap | 2 | Weak |
-| Greedy | 11 | Strong |
+| Greedy | 12 | Strong |
 | Backtracking | 6 | Strong |
 | Dynamic Programming | 10 | Strong |
 | Graph Algorithms | 3 | Medium |
@@ -139,6 +139,7 @@
 | 2265 | Count Nodes Equal to Average of Subtree | Medium | Trees (DFS) | 2026-09-10 | Independent | O(N) / O(H) | Yes | No |
 | 3483 | Unique 3-Digit Even Numbers | Easy | Hashing (Hashing) | 2026-09-11 | Independent | O(N) / O(1) | Yes | No |
 | 836 | Rectangle Overlap | Easy | Math (Greedy) | 2026-09-14 | Independent | O(1) / O(1) | Yes | No |
+| 2472 | Maximum Number of Non-overlapping Palindrome Substrings | Hard | Greedy (Greedy) | 2026-09-15 | Independent | O(N * k) / O(1) | Yes | No |
 
 ---
 
@@ -390,7 +391,7 @@
 * **Reattempt Reason/Context:** N/A
 
 ### LeetCode #24: Swap Nodes in Pairs
-* **Main Idea:** Iterative swapping of pairs with average pointer adjustments.
+* **Main Idea:** Iterative swapping of pairs with temporary pointer adjustments.
 * **Mistake Made:** None
 * **Reattempt Reason/Context:** N/A
 
@@ -626,6 +627,11 @@
 
 ### LeetCode #836: Rectangle Overlap
 * **Main Idea:** Check for separation along X and Y axes. Two axis-aligned rectangles overlap if and only if they overlap in both dimensions: !(rec1[2] <= rec2[0] || rec1[0] >= rec2[2] || rec1[3] <= rec2[1] || rec1[1] >= rec2[3]).
+* **Mistake Made:** None
+* **Reattempt Reason/Context:** N/A
+
+### LeetCode #2472: Maximum Number of Non-overlapping Palindrome Substrings
+* **Main Idea:** Greedy interval selection of minimal palindromes. A minimal valid palindrome of length >= k has length either k or k+1. Scan right endpoint r from k-1 to n-1 and check both lengths; when found, advance left boundary l0 to r+1.
 * **Mistake Made:** None
 * **Reattempt Reason/Context:** N/A
 
