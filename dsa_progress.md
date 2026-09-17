@@ -6,7 +6,7 @@ Track progress across all 20 core DSA topics.
 
 | Topic | Status | Attempted | Solved | Easy | Medium | Hard | Confidence |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| [Arrays](#arrays) | Strong | 14 | 14 | 5 | 7 | 2 | High |
+| [Arrays](#arrays) | Strong | 15 | 15 | 5 | 8 | 2 | High |
 | [Strings](#strings) | Strong | 12 | 12 | 3 | 8 | 1 | High |
 | [Hashing](#hashing) | Strong | 7 | 7 | 3 | 4 | 0 | High |
 | [Linked Lists](#linked-lists) | Strong | 10 | 10 | 2 | 6 | 2 | High |
@@ -21,7 +21,7 @@ Track progress across all 20 core DSA topics.
 | [Heaps](#heaps) | Learning | 1 | 1 | 0 | 1 | 0 | Low |
 | [Graphs](#graphs) | Practicing | 3 | 3 | 0 | 3 | 0 | Medium |
 | [Greedy](#greedy) | Practicing | 4 | 4 | 1 | 2 | 1 | Medium |
-| [Dynamic Programming](#dynamic-programming) | Strong | 12 | 12 | 2 | 3 | 7 | High |
+| [Dynamic Programming](#dynamic-programming) | Strong | 13 | 13 | 2 | 4 | 7 | High |
 | [Tries](#tries) | Not Started | 0 | 0 | 0 | 0 | 0 | None |
 | [Bit Manipulation](#bit-manipulation) | Learning | 1 | 1 | 0 | 1 | 0 | Low |
 | [Advanced Data Structures](#advanced-data-structures) | Learning | 1 | 1 | 0 | 1 | 0 | Low |
@@ -235,6 +235,7 @@ Track progress across all 20 core DSA topics.
 * **Patterns Learned:**
   * Dynamic Programming
   * Prefix Sum
+  * Sliding Window
   * Two Pointers
 * **Common Mistakes:**
   * None

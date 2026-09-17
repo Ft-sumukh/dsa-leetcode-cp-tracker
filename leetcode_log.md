@@ -2,12 +2,12 @@
 
 ## 📊 Summary Statistics
 
-* **Total Solved:** 98
+* **Total Solved:** 100
   * **Easy:** 26
-  * **Medium:** 54
+  * **Medium:** 56
   * **Hard:** 18
 * **Assistance Breakdown:**
-  * **Independent Solves:** 98
+  * **Independent Solves:** 100
   * **Hint-Assisted Solves:** 0
   * **Editorial-Assisted Solves:** 0
 * **Problems Needing Reattempt:** 2 ⚠️
@@ -16,9 +16,9 @@
 
 | Pattern | Solved Count | Strength Level (Weak / Medium / Strong) |
 | :--- | :---: | :---: |
-| Hashing | 7 | Strong |
+| Hashing | 8 | Strong |
 | Two Pointers | 22 | Strong |
-| Sliding Window | 4 | Medium |
+| Sliding Window | 5 | Medium |
 | Prefix Sum | 5 | Medium |
 | Binary Search | 6 | Strong |
 | Stack | 6 | Strong |
@@ -140,6 +140,8 @@
 | 3483 | Unique 3-Digit Even Numbers | Easy | Hashing (Hashing) | 2026-09-11 | Independent | O(N) / O(1) | Yes | No |
 | 836 | Rectangle Overlap | Easy | Math (Greedy) | 2026-09-14 | Independent | O(1) / O(1) | Yes | No |
 | 2472 | Maximum Number of Non-overlapping Palindrome Substrings | Hard | Greedy (Greedy) | 2026-09-15 | Independent | O(N * k) / O(1) | Yes | No |
+| 73 | Set Matrix Zeroes | Medium | Arrays (Hashing) | 2026-09-16 | Independent | O(M * N) / O(1) | Yes | No |
+| 1477 | Find Two Non-overlapping Sub-arrays Each With Target Sum | Medium | Dynamic Programming (Sliding Window) | 2026-09-17 | Independent | O(N) / O(N) | Yes | No |
 
 ---
 
@@ -635,3 +637,12 @@
 * **Mistake Made:** None
 * **Reattempt Reason/Context:** N/A
 
+### LeetCode #73: Set Matrix Zeroes
+* **Main Idea:** Use the first row and first column of the matrix as state markers to track which rows and columns should be zeroed, with a boolean flag `rowZero` for row 0. First pass records zeros, second pass updates submatrix `(1..m-1, 1..n-1)`, and final passes update column 0 and row 0.
+* **Mistake Made:** None
+* **Reattempt Reason/Context:** N/A
+
+### LeetCode #1477: Find Two Non-overlapping Sub-arrays Each With Target Sum
+* **Main Idea:** Two-pointer sliding window combined with prefix DP. Maintain `lens[r]` as the minimum length of a valid target subarray ending at or before index `r`. When a window `[l, r]` sums to `target`, update global answer with `(r - l + 1) + lens[l - 1]` (if `l > 0`) and update `lens[r] = min(lens[r], r - l + 1)`.
+* **Mistake Made:** None
+* **Reattempt Reason/Context:** N/A
