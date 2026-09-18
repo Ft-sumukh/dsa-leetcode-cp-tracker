@@ -2,12 +2,12 @@
 
 ## 📊 Summary Statistics
 
-* **Total Solved:** 100
+* **Total Solved:** 101
   * **Easy:** 26
   * **Medium:** 56
-  * **Hard:** 18
+  * **Hard:** 19
 * **Assistance Breakdown:**
-  * **Independent Solves:** 100
+  * **Independent Solves:** 101
   * **Hint-Assisted Solves:** 0
   * **Editorial-Assisted Solves:** 0
 * **Problems Needing Reattempt:** 2 ⚠️
@@ -28,7 +28,7 @@
 | BFS | 3 | Medium |
 | DFS | 3 | Medium |
 | Heap | 2 | Weak |
-| Greedy | 12 | Strong |
+| Greedy | 13 | Strong |
 | Backtracking | 6 | Strong |
 | Dynamic Programming | 10 | Strong |
 | Graph Algorithms | 3 | Medium |
@@ -142,6 +142,7 @@
 | 2472 | Maximum Number of Non-overlapping Palindrome Substrings | Hard | Greedy (Greedy) | 2026-09-15 | Independent | O(N * k) / O(1) | Yes | No |
 | 73 | Set Matrix Zeroes | Medium | Arrays (Hashing) | 2026-09-16 | Independent | O(M * N) / O(1) | Yes | No |
 | 1477 | Find Two Non-overlapping Sub-arrays Each With Target Sum | Medium | Dynamic Programming (Sliding Window) | 2026-09-17 | Independent | O(N) / O(N) | Yes | No |
+| 1520 | Maximum Number of Non-Overlapping Substrings | Hard | Greedy (Greedy) | 2026-09-18 | Independent | O(N) / O(1) | Yes | No |
 
 ---
 
@@ -644,5 +645,10 @@
 
 ### LeetCode #1477: Find Two Non-overlapping Sub-arrays Each With Target Sum
 * **Main Idea:** Two-pointer sliding window combined with prefix DP. Maintain `lens[r]` as the minimum length of a valid target subarray ending at or before index `r`. When a window `[l, r]` sums to `target`, update global answer with `(r - l + 1) + lens[l - 1]` (if `l > 0`) and update `lens[r] = min(lens[r], r - l + 1)`.
+* **Mistake Made:** None
+* **Reattempt Reason/Context:** N/A
+
+### LeetCode #1520: Maximum Number of Non-Overlapping Substrings
+* **Main Idea:** Find first and last occurrences of each character. For each character c, expand interval [first[c], last[c]] to enclose all occurrences of characters inside; prune if an enclosed character starts before first[c]. Sort valid intervals by earliest ending position (greedy interval scheduling) and select non-overlapping substrings.
 * **Mistake Made:** None
 * **Reattempt Reason/Context:** N/A

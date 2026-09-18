@@ -20,7 +20,7 @@ Track progress across all 20 core DSA topics.
 | [BST](#bst) | Practicing | 3 | 3 | 0 | 3 | 0 | Medium |
 | [Heaps](#heaps) | Learning | 1 | 1 | 0 | 1 | 0 | Low |
 | [Graphs](#graphs) | Practicing | 3 | 3 | 0 | 3 | 0 | Medium |
-| [Greedy](#greedy) | Practicing | 4 | 4 | 1 | 2 | 1 | Medium |
+| [Greedy](#greedy) | Practicing | 5 | 5 | 1 | 2 | 2 | Medium |
 | [Dynamic Programming](#dynamic-programming) | Strong | 13 | 13 | 2 | 4 | 7 | High |
 | [Tries](#tries) | Not Started | 0 | 0 | 0 | 0 | 0 | None |
 | [Bit Manipulation](#bit-manipulation) | Learning | 1 | 1 | 0 | 1 | 0 | Low |
