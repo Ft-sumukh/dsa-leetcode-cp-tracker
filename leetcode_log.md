@@ -2,12 +2,12 @@
 
 ## 📊 Summary Statistics
 
-* **Total Solved:** 101
-  * **Easy:** 26
+* **Total Solved:** 102
+  * **Easy:** 27
   * **Medium:** 56
   * **Hard:** 19
 * **Assistance Breakdown:**
-  * **Independent Solves:** 101
+  * **Independent Solves:** 102
   * **Hint-Assisted Solves:** 0
   * **Editorial-Assisted Solves:** 0
 * **Problems Needing Reattempt:** 2 ⚠️
@@ -16,7 +16,7 @@
 
 | Pattern | Solved Count | Strength Level (Weak / Medium / Strong) |
 | :--- | :---: | :---: |
-| Hashing | 8 | Strong |
+| Hashing | 9 | Strong |
 | Two Pointers | 22 | Strong |
 | Sliding Window | 5 | Medium |
 | Prefix Sum | 5 | Medium |
@@ -143,6 +143,7 @@
 | 73 | Set Matrix Zeroes | Medium | Arrays (Hashing) | 2026-09-16 | Independent | O(M * N) / O(1) | Yes | No |
 | 1477 | Find Two Non-overlapping Sub-arrays Each With Target Sum | Medium | Dynamic Programming (Sliding Window) | 2026-09-17 | Independent | O(N) / O(N) | Yes | No |
 | 1520 | Maximum Number of Non-Overlapping Substrings | Hard | Greedy (Greedy) | 2026-09-18 | Independent | O(N) / O(1) | Yes | No |
+| 3498 | Reverse Degree of a String | Easy | Strings (Hashing) | 2026-09-20 | Independent | O(N) / O(1) | Yes | No |
 
 ---
 
@@ -650,5 +651,10 @@
 
 ### LeetCode #1520: Maximum Number of Non-Overlapping Substrings
 * **Main Idea:** Find first and last occurrences of each character. For each character c, expand interval [first[c], last[c]] to enclose all occurrences of characters inside; prune if an enclosed character starts before first[c]. Sort valid intervals by earliest ending position (greedy interval scheduling) and select non-overlapping substrings.
+* **Mistake Made:** None
+* **Reattempt Reason/Context:** N/A
+
+### LeetCode #3498: Reverse Degree of a String
+* **Main Idea:** Iterate through the string, calculate reversed alphabet position `26 - (c - 'a')` and 1-based index `i + 1`, and accumulate their product into the total reverse degree in O(N) time and O(1) space.
 * **Mistake Made:** None
 * **Reattempt Reason/Context:** N/A
