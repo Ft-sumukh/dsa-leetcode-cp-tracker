@@ -24,7 +24,7 @@ Track progress across all 20 core DSA topics.
 | [Dynamic Programming](#dynamic-programming) | Strong | 13 | 13 | 2 | 4 | 7 | High |
 | [Tries](#tries) | Not Started | 0 | 0 | 0 | 0 | 0 | None |
 | [Bit Manipulation](#bit-manipulation) | Learning | 1 | 1 | 0 | 1 | 0 | Low |
-| [Advanced Data Structures](#advanced-data-structures) | Learning | 1 | 1 | 0 | 1 | 0 | Low |
+| [Advanced Data Structures](#advanced-data-structures) | Learning | 2 | 2 | 0 | 1 | 1 | Low |
 | [Advanced Algorithms](#advanced-algorithms) | Strong | 9 | 9 | 5 | 3 | 1 | High |
 
 ---
@@ -273,6 +273,7 @@ Track progress across all 20 core DSA topics.
 * **Confidence Level:** Low
 * **Patterns Learned:**
   * Linked List
+  * Segment Tree
 * **Common Mistakes:**
   * None
 * **Weak Areas:**

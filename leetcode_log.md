@@ -2,12 +2,12 @@
 
 ## 📊 Summary Statistics
 
-* **Total Solved:** 102
+* **Total Solved:** 103
   * **Easy:** 27
   * **Medium:** 56
-  * **Hard:** 19
+  * **Hard:** 20
 * **Assistance Breakdown:**
-  * **Independent Solves:** 102
+  * **Independent Solves:** 103
   * **Hint-Assisted Solves:** 0
   * **Editorial-Assisted Solves:** 0
 * **Problems Needing Reattempt:** 2 ⚠️
@@ -34,7 +34,7 @@
 | Graph Algorithms | 3 | Medium |
 | Union Find | 0 | - |
 | Trie | 0 | - |
-| Segment Tree | 0 | - |
+| Segment Tree | 1 | Weak |
 
 ---
 
@@ -144,6 +144,7 @@
 | 1477 | Find Two Non-overlapping Sub-arrays Each With Target Sum | Medium | Dynamic Programming (Sliding Window) | 2026-09-17 | Independent | O(N) / O(N) | Yes | No |
 | 1520 | Maximum Number of Non-Overlapping Substrings | Hard | Greedy (Greedy) | 2026-09-18 | Independent | O(N) / O(1) | Yes | No |
 | 3498 | Reverse Degree of a String | Easy | Strings (Hashing) | 2026-09-20 | Independent | O(N) / O(1) | Yes | No |
+| 3525 | Find X Value of Array II | Hard | Advanced Data Structures (Segment Tree) | 2026-09-22 | Independent | O((N + Q) * k * log N) / O(N * k) | Yes | No |
 
 ---
 
@@ -656,5 +657,10 @@
 
 ### LeetCode #3498: Reverse Degree of a String
 * **Main Idea:** Iterate through the string, calculate reversed alphabet position `26 - (c - 'a')` and 1-based index `i + 1`, and accumulate their product into the total reverse degree in O(N) time and O(1) space.
+* **Mistake Made:** None
+* **Reattempt Reason/Context:** N/A
+
+### LeetCode #3525: Find X Value of Array II
+* **Main Idea:** Maintain a Segment Tree where each node stores the total prefix product modulo k and a frequency array `freq[r]` of suffix-removed product remainders modulo k. Node merging combines product `(L.prod * R.prod) % k` and maps right child remainder frequencies `(L.prod * r) % k` into the merged frequency distribution, supporting point updates and range queries in O(k log N) per operation.
 * **Mistake Made:** None
 * **Reattempt Reason/Context:** N/A
