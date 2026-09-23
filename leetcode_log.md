@@ -2,12 +2,12 @@
 
 ## 📊 Summary Statistics
 
-* **Total Solved:** 103
+* **Total Solved:** 104
   * **Easy:** 27
-  * **Medium:** 56
+  * **Medium:** 57
   * **Hard:** 20
 * **Assistance Breakdown:**
-  * **Independent Solves:** 103
+  * **Independent Solves:** 104
   * **Hint-Assisted Solves:** 0
   * **Editorial-Assisted Solves:** 0
 * **Problems Needing Reattempt:** 2 ⚠️
@@ -18,7 +18,7 @@
 | :--- | :---: | :---: |
 | Hashing | 9 | Strong |
 | Two Pointers | 22 | Strong |
-| Sliding Window | 5 | Medium |
+| Sliding Window | 6 | Medium |
 | Prefix Sum | 5 | Medium |
 | Binary Search | 6 | Strong |
 | Stack | 6 | Strong |
@@ -145,6 +145,7 @@
 | 1520 | Maximum Number of Non-Overlapping Substrings | Hard | Greedy (Greedy) | 2026-09-18 | Independent | O(N) / O(1) | Yes | No |
 | 3498 | Reverse Degree of a String | Easy | Strings (Hashing) | 2026-09-20 | Independent | O(N) / O(1) | Yes | No |
 | 3525 | Find X Value of Array II | Hard | Advanced Data Structures (Segment Tree) | 2026-09-22 | Independent | O((N + Q) * k * log N) / O(N * k) | Yes | No |
+| 1658 | Minimum Operations to Reduce X to Zero | Medium | Arrays (Sliding Window) | 2026-09-23 | Independent | O(N) / O(1) | Yes | No |
 
 ---
 
@@ -662,5 +663,10 @@
 
 ### LeetCode #3525: Find X Value of Array II
 * **Main Idea:** Maintain a Segment Tree where each node stores the total prefix product modulo k and a frequency array `freq[r]` of suffix-removed product remainders modulo k. Node merging combines product `(L.prod * R.prod) % k` and maps right child remainder frequencies `(L.prod * r) % k` into the merged frequency distribution, supporting point updates and range queries in O(k log N) per operation.
+* **Mistake Made:** None
+* **Reattempt Reason/Context:** N/A
+
+### LeetCode #1658: Minimum Operations to Reduce X to Zero
+* **Main Idea:** Invert the problem to find the maximum length of a contiguous subarray whose elements sum to `k = sum(A) - x`. Use a two-pointer sliding window to find this longest subarray in O(N) time and O(1) space, then the minimum operations required is `n - maxLength`.
 * **Mistake Made:** None
 * **Reattempt Reason/Context:** N/A

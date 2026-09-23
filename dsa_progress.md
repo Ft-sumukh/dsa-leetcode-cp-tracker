@@ -6,7 +6,7 @@ Track progress across all 20 core DSA topics.
 
 | Topic | Status | Attempted | Solved | Easy | Medium | Hard | Confidence |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| [Arrays](#arrays) | Strong | 15 | 15 | 5 | 8 | 2 | High |
+| [Arrays](#arrays) | Strong | 16 | 16 | 5 | 9 | 2 | High |
 | [Strings](#strings) | Strong | 13 | 13 | 4 | 8 | 1 | High |
 | [Hashing](#hashing) | Strong | 7 | 7 | 3 | 4 | 0 | High |
 | [Linked Lists](#linked-lists) | Strong | 10 | 10 | 2 | 6 | 2 | High |
@@ -38,6 +38,7 @@ Track progress across all 20 core DSA topics.
   * Greedy
   * Hashing
   * Prefix Sum
+  * Sliding Window
   * Sorting
   * Two Pointers
 * **Common Mistakes:**
