@@ -2,12 +2,12 @@
 
 ## 📊 Summary Statistics
 
-* **Total Solved:** 104
+* **Total Solved:** 105
   * **Easy:** 27
-  * **Medium:** 57
+  * **Medium:** 58
   * **Hard:** 20
 * **Assistance Breakdown:**
-  * **Independent Solves:** 104
+  * **Independent Solves:** 105
   * **Hint-Assisted Solves:** 0
   * **Editorial-Assisted Solves:** 0
 * **Problems Needing Reattempt:** 2 ⚠️
@@ -16,7 +16,7 @@
 
 | Pattern | Solved Count | Strength Level (Weak / Medium / Strong) |
 | :--- | :---: | :---: |
-| Hashing | 9 | Strong |
+| Hashing | 10 | Strong |
 | Two Pointers | 22 | Strong |
 | Sliding Window | 6 | Medium |
 | Prefix Sum | 5 | Medium |
@@ -146,6 +146,7 @@
 | 3498 | Reverse Degree of a String | Easy | Strings (Hashing) | 2026-09-20 | Independent | O(N) / O(1) | Yes | No |
 | 3525 | Find X Value of Array II | Hard | Advanced Data Structures (Segment Tree) | 2026-09-22 | Independent | O((N + Q) * k * log N) / O(N * k) | Yes | No |
 | 1658 | Minimum Operations to Reduce X to Zero | Medium | Arrays (Sliding Window) | 2026-09-23 | Independent | O(N) / O(1) | Yes | No |
+| 1807 | Evaluate the Bracket Pairs of a String | Medium | Strings (Hashing) | 2026-09-26 | Independent | O(N + M) / O(M) | Yes | No |
 
 ---
 
@@ -668,5 +669,10 @@
 
 ### LeetCode #1658: Minimum Operations to Reduce X to Zero
 * **Main Idea:** Invert the problem to find the maximum length of a contiguous subarray whose elements sum to `k = sum(A) - x`. Use a two-pointer sliding window to find this longest subarray in O(N) time and O(1) space, then the minimum operations required is `n - maxLength`.
+* **Mistake Made:** None
+* **Reattempt Reason/Context:** N/A
+
+### LeetCode #1807: Evaluate the Bracket Pairs of a String
+* **Main Idea:** Build an unordered_map hash table from key-value knowledge pairs. Scan through the string character by character; upon encountering '(', find matching ')' to extract the key and replace it with its dictionary value (or '?' if not found) in O(N + M) time.
 * **Mistake Made:** None
 * **Reattempt Reason/Context:** N/A
