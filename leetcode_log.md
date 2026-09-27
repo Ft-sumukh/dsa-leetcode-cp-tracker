@@ -2,12 +2,12 @@
 
 ## 📊 Summary Statistics
 
-* **Total Solved:** 105
+* **Total Solved:** 106
   * **Easy:** 27
-  * **Medium:** 58
+  * **Medium:** 59
   * **Hard:** 20
 * **Assistance Breakdown:**
-  * **Independent Solves:** 105
+  * **Independent Solves:** 106
   * **Hint-Assisted Solves:** 0
   * **Editorial-Assisted Solves:** 0
 * **Problems Needing Reattempt:** 2 ⚠️
@@ -21,7 +21,7 @@
 | Sliding Window | 6 | Medium |
 | Prefix Sum | 5 | Medium |
 | Binary Search | 6 | Strong |
-| Stack | 6 | Strong |
+| Stack | 7 | Strong |
 | Monotonic Stack | 0 | - |
 | Linked List | 8 | Strong |
 | Tree Traversal | 4 | Medium |
@@ -147,6 +147,7 @@
 | 3525 | Find X Value of Array II | Hard | Advanced Data Structures (Segment Tree) | 2026-09-22 | Independent | O((N + Q) * k * log N) / O(N * k) | Yes | No |
 | 1658 | Minimum Operations to Reduce X to Zero | Medium | Arrays (Sliding Window) | 2026-09-23 | Independent | O(N) / O(1) | Yes | No |
 | 1807 | Evaluate the Bracket Pairs of a String | Medium | Strings (Hashing) | 2026-09-26 | Independent | O(N + M) / O(M) | Yes | No |
+| 1190 | Reverse Substrings Between Each Pair of Parentheses | Medium | Stacks (Stack) | 2026-09-27 | Independent | O(N) / O(N) | Yes | No |
 
 ---
 
@@ -674,5 +675,10 @@
 
 ### LeetCode #1807: Evaluate the Bracket Pairs of a String
 * **Main Idea:** Build an unordered_map hash table from key-value knowledge pairs. Scan through the string character by character; upon encountering '(', find matching ')' to extract the key and replace it with its dictionary value (or '?' if not found) in O(N + M) time.
+* **Mistake Made:** None
+* **Reattempt Reason/Context:** N/A
+
+### LeetCode #1190: Reverse Substrings Between Each Pair of Parentheses
+* **Main Idea:** Use a stack in a first pass to create bidirectional links between matching opening and closing parenthesis pairs. In a second pass, traverse the string crawling through the teleporting parenthesis links (`i = link[i]`) and flipping direction (`dir = -dir`) on parentheses to build the reversed string in optimal O(N) time and O(N) auxiliary space.
 * **Mistake Made:** None
 * **Reattempt Reason/Context:** N/A
