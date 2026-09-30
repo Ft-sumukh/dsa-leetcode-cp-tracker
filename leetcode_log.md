@@ -2,12 +2,12 @@
 
 ## 📊 Summary Statistics
 
-* **Total Solved:** 106
+* **Total Solved:** 107
   * **Easy:** 27
-  * **Medium:** 59
+  * **Medium:** 60
   * **Hard:** 20
 * **Assistance Breakdown:**
-  * **Independent Solves:** 106
+  * **Independent Solves:** 107
   * **Hint-Assisted Solves:** 0
   * **Editorial-Assisted Solves:** 0
 * **Problems Needing Reattempt:** 2 ⚠️
@@ -28,7 +28,7 @@
 | BFS | 3 | Medium |
 | DFS | 3 | Medium |
 | Heap | 2 | Weak |
-| Greedy | 13 | Strong |
+| Greedy | 14 | Strong |
 | Backtracking | 6 | Strong |
 | Dynamic Programming | 10 | Strong |
 | Graph Algorithms | 3 | Medium |
@@ -148,6 +148,7 @@
 | 1658 | Minimum Operations to Reduce X to Zero | Medium | Arrays (Sliding Window) | 2026-09-23 | Independent | O(N) / O(1) | Yes | No |
 | 1807 | Evaluate the Bracket Pairs of a String | Medium | Strings (Hashing) | 2026-09-26 | Independent | O(N + M) / O(M) | Yes | No |
 | 1190 | Reverse Substrings Between Each Pair of Parentheses | Medium | Stacks (Stack) | 2026-09-27 | Independent | O(N) / O(N) | Yes | No |
+| 1111 | Maximum Nesting Depth of Two Valid Parentheses Strings | Medium | Stacks (Greedy) | 2026-09-30 | Independent | O(N) / O(1) | Yes | No |
 
 ---
 
@@ -680,5 +681,10 @@
 
 ### LeetCode #1190: Reverse Substrings Between Each Pair of Parentheses
 * **Main Idea:** Use a stack in a first pass to create bidirectional links between matching opening and closing parenthesis pairs. In a second pass, traverse the string crawling through the teleporting parenthesis links (`i = link[i]`) and flipping direction (`dir = -dir`) on parentheses to build the reversed string in optimal O(N) time and O(N) auxiliary space.
+* **Mistake Made:** None
+* **Reattempt Reason/Context:** N/A
+
+### LeetCode #1111: Maximum Nesting Depth of Two Valid Parentheses Strings
+* **Main Idea:** To minimize the maximum nesting depth across two partitioned valid parentheses sequences, greedily distribute alternating nesting levels between groups 0 and 1. The bitwise parity expression `(i ^ s[i]) & 1` compactly assigns matching opening and closing brackets of the same nesting depth to the same group in O(N) time and O(1) auxiliary space.
 * **Mistake Made:** None
 * **Reattempt Reason/Context:** N/A

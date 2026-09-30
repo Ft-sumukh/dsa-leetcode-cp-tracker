@@ -10,7 +10,7 @@ Track progress across all 20 core DSA topics.
 | [Strings](#strings) | Strong | 14 | 14 | 4 | 9 | 1 | High |
 | [Hashing](#hashing) | Strong | 7 | 7 | 3 | 4 | 0 | High |
 | [Linked Lists](#linked-lists) | Strong | 10 | 10 | 2 | 6 | 2 | High |
-| [Stacks](#stacks) | Learning | 3 | 3 | 1 | 1 | 1 | Low |
+| [Stacks](#stacks) | Learning | 4 | 4 | 1 | 2 | 1 | Medium |
 | [Queues](#queues) | Not Started | 0 | 0 | 0 | 0 | 0 | None |
 | [Recursion](#recursion) | Learning | 1 | 1 | 0 | 1 | 0 | Low |
 | [Backtracking](#backtracking) | Practicing | 4 | 4 | 0 | 3 | 1 | Medium |
@@ -96,6 +96,7 @@ Track progress across all 20 core DSA topics.
 * **Status:** Learning *(Not Started ➡️ Learning ➡️ Practicing ➡️ Strong ➡️ Interview Ready)*
 * **Confidence Level:** Low
 * **Patterns Learned:**
+  * Greedy
   * Stack
 * **Common Mistakes:**
   * None
