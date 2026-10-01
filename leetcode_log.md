@@ -107,7 +107,7 @@
 | 27 | Remove Element | Easy | Arrays (Two Pointers) | 2026-08-25 | Independent | O(N) / O(1) | Yes | No |
 | 26 | Remove Duplicates from Sorted Array | Easy | Arrays (Two Pointers) | 2026-08-25 | Independent | O(N) / O(1) | Yes | No |
 | 21 | Merge Two Sorted Lists | Easy | Linked Lists (Linked List) | 2026-08-25 | Independent | O(N + M) / O(1) | Yes | No |
-| 20 | Valid Parentheses | Easy | Stacks (Stack) | 2026-08-25 | Independent | O(N) / O(N) | Yes | No |
+| 20 | Valid Parentheses | Easy | Stacks (Stack) | 2026-08-25 | Independent | O(N) / O(1) | Yes | No |
 | 16 | 3Sum Closest | Medium | Arrays (Two Pointers) | 2026-08-25 | Independent | O(N^2) / O(1) | Yes | No |
 | 14 | Longest Common Prefix | Easy | Strings (Two Pointers) | 2026-08-25 | Independent | O(N * L) / O(1) | Yes | No |
 | 13 | Roman to Integer | Easy | Strings (Hashing) | 2026-08-25 | Independent | O(N) / O(1) | Yes | No |
@@ -480,7 +480,7 @@
 * **Reattempt Reason/Context:** N/A
 
 ### LeetCode #20: Valid Parentheses
-* **Main Idea:** Standard stack usage matching opposite brackets.
+* **Main Idea:** In-place stack simulation directly reusing input string memory (`str[j++]`) with bitwise character classification: opening brackets have `(s & 3) != 1` and valid matching closing brackets satisfy `((s - str[--j] + 1) >> 1) == 1`, achieving O(N) time with O(1) auxiliary space (re-optimized on 2026-10-01).
 * **Mistake Made:** None
 * **Reattempt Reason/Context:** N/A
 
