@@ -410,7 +410,7 @@
 * **Reattempt Reason/Context:** N/A
 
 ### LeetCode #22: Generate Parentheses
-* **Main Idea:** Backtracking tracking open/close count constraints.
+* **Main Idea:** DFS backtracking tracking remaining open and close parenthesis counters (O and C). By fixing the initial '(' and appending the final ')' at the base case (O==0, C==0), we prune invalid paths by only recursing on '(' when O > 0 and ')' when C >= O (re-visited on 2026-10-02).
 * **Mistake Made:** None
 * **Reattempt Reason/Context:** N/A
 
