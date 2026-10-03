@@ -435,7 +435,7 @@
 * **Reattempt Reason/Context:** N/A
 
 ### LeetCode #32: Longest Valid Parentheses
-* **Main Idea:** Push indices to stack, popped calculation relative to current top element.
+* **Main Idea:** Maintain an index stack initialized with base boundary `-1`. Push indices of '(' onto the stack; upon encountering ')', pop the top index. If the stack becomes empty, push the current index as the new valid base boundary; otherwise, update the maximum valid length using `i - st.top()` in O(N) time and O(N) space (re-visited on 2026-10-03).
 * **Mistake Made:** None
 * **Reattempt Reason/Context:** N/A
 
