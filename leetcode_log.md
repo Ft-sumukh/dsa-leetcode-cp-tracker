@@ -2,12 +2,12 @@
 
 ## 📊 Summary Statistics
 
-* **Total Solved:** 107
+* **Total Solved:** 108
   * **Easy:** 27
-  * **Medium:** 60
+  * **Medium:** 61
   * **Hard:** 20
 * **Assistance Breakdown:**
-  * **Independent Solves:** 107
+  * **Independent Solves:** 108
   * **Hint-Assisted Solves:** 0
   * **Editorial-Assisted Solves:** 0
 * **Problems Needing Reattempt:** 2 ⚠️
@@ -28,7 +28,7 @@
 | BFS | 3 | Medium |
 | DFS | 3 | Medium |
 | Heap | 2 | Weak |
-| Greedy | 14 | Strong |
+| Greedy | 15 | Strong |
 | Backtracking | 6 | Strong |
 | Dynamic Programming | 10 | Strong |
 | Graph Algorithms | 3 | Medium |
@@ -149,6 +149,7 @@
 | 1807 | Evaluate the Bracket Pairs of a String | Medium | Strings (Hashing) | 2026-09-26 | Independent | O(N + M) / O(M) | Yes | No |
 | 1190 | Reverse Substrings Between Each Pair of Parentheses | Medium | Stacks (Stack) | 2026-09-27 | Independent | O(N) / O(N) | Yes | No |
 | 1111 | Maximum Nesting Depth of Two Valid Parentheses Strings | Medium | Stacks (Greedy) | 2026-09-30 | Independent | O(N) / O(1) | Yes | No |
+| 678 | Valid Parenthesis String | Medium | Greedy (Greedy) | 2026-10-04 | Independent | O(N) / O(1) | Yes | No |
 
 ---
 
@@ -686,5 +687,10 @@
 
 ### LeetCode #1111: Maximum Nesting Depth of Two Valid Parentheses Strings
 * **Main Idea:** To minimize the maximum nesting depth across two partitioned valid parentheses sequences, greedily distribute alternating nesting levels between groups 0 and 1. The bitwise parity expression `(i ^ s[i]) & 1` compactly assigns matching opening and closing brackets of the same nesting depth to the same group in O(N) time and O(1) auxiliary space.
+* **Mistake Made:** None
+* **Reattempt Reason/Context:** N/A
+
+### LeetCode #678: Valid Parenthesis String
+* **Main Idea:** Greedily maintain the minimum (`l`) and maximum (`h`) count of possible open parentheses. For '(', increment both; for ')', decrement both; for '*', decrement `l` (treating '*' as ')') and increment `h` (treating '*' as '('). If `h < 0` at any point, too many ')' occurred; clamp `l = max(l, 0)`. Valid if `l == 0` at the end in O(N) time and O(1) space.
 * **Mistake Made:** None
 * **Reattempt Reason/Context:** N/A
