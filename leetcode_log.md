@@ -2,12 +2,12 @@
 
 ## 📊 Summary Statistics
 
-* **Total Solved:** 108
+* **Total Solved:** 109
   * **Easy:** 27
-  * **Medium:** 61
+  * **Medium:** 62
   * **Hard:** 20
 * **Assistance Breakdown:**
-  * **Independent Solves:** 108
+  * **Independent Solves:** 109
   * **Hint-Assisted Solves:** 0
   * **Editorial-Assisted Solves:** 0
 * **Problems Needing Reattempt:** 2 ⚠️
@@ -21,7 +21,7 @@
 | Sliding Window | 6 | Medium |
 | Prefix Sum | 5 | Medium |
 | Binary Search | 6 | Strong |
-| Stack | 7 | Strong |
+| Stack | 8 | Strong |
 | Monotonic Stack | 0 | - |
 | Linked List | 8 | Strong |
 | Tree Traversal | 4 | Medium |
@@ -150,6 +150,7 @@
 | 1190 | Reverse Substrings Between Each Pair of Parentheses | Medium | Stacks (Stack) | 2026-09-27 | Independent | O(N) / O(N) | Yes | No |
 | 1111 | Maximum Nesting Depth of Two Valid Parentheses Strings | Medium | Stacks (Greedy) | 2026-09-30 | Independent | O(N) / O(1) | Yes | No |
 | 678 | Valid Parenthesis String | Medium | Greedy (Greedy) | 2026-10-04 | Independent | O(N) / O(1) | Yes | No |
+| 856 | Score of Parentheses | Medium | Stacks (Stack) | 2026-10-05 | Independent | O(N^2) / O(N) | Yes | No |
 
 ---
 
@@ -692,5 +693,10 @@
 
 ### LeetCode #678: Valid Parenthesis String
 * **Main Idea:** Greedily maintain the minimum (`l`) and maximum (`h`) count of possible open parentheses. For '(', increment both; for ')', decrement both; for '*', decrement `l` (treating '*' as ')') and increment `h` (treating '*' as '('). If `h < 0` at any point, too many ')' occurred; clamp `l = max(l, 0)`. Valid if `l == 0` at the end in O(N) time and O(1) space.
+* **Mistake Made:** None
+* **Reattempt Reason/Context:** N/A
+
+### LeetCode #856: Score of Parentheses
+* **Main Idea:** Divide and conquer recursion finding balanced component boundaries using balance counter `bal`. For each component, if `k - i == 1` return 1 (score of `()`), otherwise recursively compute `2 * F(s, i + 1, k)` for inner balanced substring and advance boundary pointer `i = k + 1`.
 * **Mistake Made:** None
 * **Reattempt Reason/Context:** N/A
