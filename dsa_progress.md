@@ -10,10 +10,10 @@ Track progress across all 20 core DSA topics.
 | [Strings](#strings) | Strong | 14 | 14 | 4 | 9 | 1 | High |
 | [Hashing](#hashing) | Strong | 7 | 7 | 3 | 4 | 0 | High |
 | [Linked Lists](#linked-lists) | Strong | 10 | 10 | 2 | 6 | 2 | High |
-| [Stacks](#stacks) | Learning | 5 | 5 | 1 | 3 | 1 | Medium |
+| [Stacks](#stacks) | Learning | 6 | 6 | 1 | 4 | 1 | Medium |
 | [Queues](#queues) | Not Started | 0 | 0 | 0 | 0 | 0 | None |
 | [Recursion](#recursion) | Learning | 1 | 1 | 0 | 1 | 0 | Low |
-| [Backtracking](#backtracking) | Practicing | 4 | 4 | 0 | 3 | 1 | Medium |
+| [Backtracking](#backtracking) | Practicing | 5 | 5 | 0 | 3 | 2 | Medium |
 | [Sorting](#sorting) | Practicing | 4 | 4 | 0 | 4 | 0 | Medium |
 | [Searching](#searching) | Practicing | 4 | 4 | 1 | 2 | 1 | Medium |
 | [Trees](#trees) | Strong | 6 | 6 | 3 | 2 | 1 | High |

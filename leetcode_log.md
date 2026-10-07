@@ -2,12 +2,12 @@
 
 ## 📊 Summary Statistics
 
-* **Total Solved:** 109
+* **Total Solved:** 111
   * **Easy:** 27
-  * **Medium:** 62
-  * **Hard:** 20
+  * **Medium:** 63
+  * **Hard:** 21
 * **Assistance Breakdown:**
-  * **Independent Solves:** 109
+  * **Independent Solves:** 111
   * **Hint-Assisted Solves:** 0
   * **Editorial-Assisted Solves:** 0
 * **Problems Needing Reattempt:** 2 ⚠️
@@ -28,8 +28,8 @@
 | BFS | 3 | Medium |
 | DFS | 3 | Medium |
 | Heap | 2 | Weak |
-| Greedy | 15 | Strong |
-| Backtracking | 6 | Strong |
+| Greedy | 16 | Strong |
+| Backtracking | 7 | Strong |
 | Dynamic Programming | 10 | Strong |
 | Graph Algorithms | 3 | Medium |
 | Union Find | 0 | - |
@@ -151,6 +151,8 @@
 | 1111 | Maximum Nesting Depth of Two Valid Parentheses Strings | Medium | Stacks (Greedy) | 2026-09-30 | Independent | O(N) / O(1) | Yes | No |
 | 678 | Valid Parenthesis String | Medium | Greedy (Greedy) | 2026-10-04 | Independent | O(N) / O(1) | Yes | No |
 | 856 | Score of Parentheses | Medium | Stacks (Stack) | 2026-10-05 | Independent | O(N^2) / O(N) | Yes | No |
+| 921 | Minimum Add to Make Parentheses Valid | Medium | Stacks (Greedy) | 2026-10-06 | Independent | O(N) / O(1) | Yes | No |
+| 301 | Remove Invalid Parentheses | Hard | Backtracking (Backtracking) | 2026-10-07 | Independent | O(2^N) / O(N) | Yes | No |
 
 ---
 
@@ -698,5 +700,15 @@
 
 ### LeetCode #856: Score of Parentheses
 * **Main Idea:** Divide and conquer recursion finding balanced component boundaries using balance counter `bal`. For each component, if `k - i == 1` return 1 (score of `()`), otherwise recursively compute `2 * F(s, i + 1, k)` for inner balanced substring and advance boundary pointer `i = k + 1`.
+* **Mistake Made:** None
+* **Reattempt Reason/Context:** N/A
+
+### LeetCode #921: Minimum Add to Make Parentheses Valid
+* **Main Idea:** Greedily track unmatched opening parentheses with counter `open` and unmatched closing parentheses with counter `add`. For '(', increment `open`; for ')', decrement `open` if `open > 0`, otherwise increment `add`. The total minimum additions required is `add + open` in O(N) time and O(1) space.
+* **Mistake Made:** None
+* **Reattempt Reason/Context:** N/A
+
+### LeetCode #301: Remove Invalid Parentheses
+* **Main Idea:** Two-pass recursive DFS scan. The forward pass scans left-to-right tracking balance counter `bal` to prune invalid ')' brackets; when `bal < 0`, recurses on removing candidate ')' characters while skipping consecutive duplicates (`j == lj || s[j-1] != ')'`). Upon completing the forward pass, the backward pass scans right-to-left to prune invalid '(' brackets in optimal pruned search space.
 * **Mistake Made:** None
 * **Reattempt Reason/Context:** N/A
