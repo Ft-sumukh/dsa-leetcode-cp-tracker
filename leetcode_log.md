@@ -2,12 +2,12 @@
 
 ## 📊 Summary Statistics
 
-* **Total Solved:** 111
-  * **Easy:** 27
+* **Total Solved:** 112
+  * **Easy:** 28
   * **Medium:** 63
   * **Hard:** 21
 * **Assistance Breakdown:**
-  * **Independent Solves:** 111
+  * **Independent Solves:** 112
   * **Hint-Assisted Solves:** 0
   * **Editorial-Assisted Solves:** 0
 * **Problems Needing Reattempt:** 2 ⚠️
@@ -21,7 +21,7 @@
 | Sliding Window | 6 | Medium |
 | Prefix Sum | 5 | Medium |
 | Binary Search | 6 | Strong |
-| Stack | 8 | Strong |
+| Stack | 9 | Strong |
 | Monotonic Stack | 0 | - |
 | Linked List | 8 | Strong |
 | Tree Traversal | 4 | Medium |
@@ -153,6 +153,7 @@
 | 856 | Score of Parentheses | Medium | Stacks (Stack) | 2026-10-05 | Independent | O(N^2) / O(N) | Yes | No |
 | 921 | Minimum Add to Make Parentheses Valid | Medium | Stacks (Greedy) | 2026-10-06 | Independent | O(N) / O(1) | Yes | No |
 | 301 | Remove Invalid Parentheses | Hard | Backtracking (Backtracking) | 2026-10-07 | Independent | O(2^N) / O(N) | Yes | No |
+| 1021 | Remove Outermost Parentheses | Easy | Stacks (Stack) | 2026-10-08 | Independent | O(N) / O(1) | Yes | No |
 
 ---
 
@@ -710,5 +711,10 @@
 
 ### LeetCode #301: Remove Invalid Parentheses
 * **Main Idea:** Two-pass recursive DFS scan. The forward pass scans left-to-right tracking balance counter `bal` to prune invalid ')' brackets; when `bal < 0`, recurses on removing candidate ')' characters while skipping consecutive duplicates (`j == lj || s[j-1] != ')'`). Upon completing the forward pass, the backward pass scans right-to-left to prune invalid '(' brackets in optimal pruned search space.
+* **Mistake Made:** None
+* **Reattempt Reason/Context:** N/A
+
+### LeetCode #1021: Remove Outermost Parentheses
+* **Main Idea:** Track nesting depth `lvl` using ASCII bitwise parity (`c & 1`). For '(', check pre-increment `lvl++` > 0 to skip outermost '('; for ')', decrement `--lvl` and check if > 0 to skip outermost ')', concatenating inner characters into result in O(N) time and O(1) space.
 * **Mistake Made:** None
 * **Reattempt Reason/Context:** N/A
