@@ -2,12 +2,12 @@
 
 ## 📊 Summary Statistics
 
-* **Total Solved:** 112
+* **Total Solved:** 113
   * **Easy:** 28
-  * **Medium:** 63
+  * **Medium:** 64
   * **Hard:** 21
 * **Assistance Breakdown:**
-  * **Independent Solves:** 112
+  * **Independent Solves:** 113
   * **Hint-Assisted Solves:** 0
   * **Editorial-Assisted Solves:** 0
 * **Problems Needing Reattempt:** 2 ⚠️
@@ -28,7 +28,7 @@
 | BFS | 3 | Medium |
 | DFS | 3 | Medium |
 | Heap | 2 | Weak |
-| Greedy | 16 | Strong |
+| Greedy | 17 | Strong |
 | Backtracking | 7 | Strong |
 | Dynamic Programming | 10 | Strong |
 | Graph Algorithms | 3 | Medium |
@@ -154,6 +154,7 @@
 | 921 | Minimum Add to Make Parentheses Valid | Medium | Stacks (Greedy) | 2026-10-06 | Independent | O(N) / O(1) | Yes | No |
 | 301 | Remove Invalid Parentheses | Hard | Backtracking (Backtracking) | 2026-10-07 | Independent | O(2^N) / O(N) | Yes | No |
 | 1021 | Remove Outermost Parentheses | Easy | Stacks (Stack) | 2026-10-08 | Independent | O(N) / O(1) | Yes | No |
+| 1541 | Minimum Insertions to Balance a Parentheses String | Medium | Stacks (Greedy) | 2026-10-09 | Independent | O(N) / O(1) | Yes | No |
 
 ---
 
@@ -716,5 +717,10 @@
 
 ### LeetCode #1021: Remove Outermost Parentheses
 * **Main Idea:** Track nesting depth `lvl` using ASCII bitwise parity (`c & 1`). For '(', check pre-increment `lvl++` > 0 to skip outermost '('; for ')', decrement `--lvl` and check if > 0 to skip outermost ')', concatenating inner characters into result in O(N) time and O(1) space.
+* **Mistake Made:** None
+* **Reattempt Reason/Context:** N/A
+
+### LeetCode #1541: Minimum Insertions to Balance a Parentheses String
+* **Main Idea:** Track required closing parentheses units `p` and insertion insertions `k`. Each '(' requires 2 units of ')'. If an opening bracket arrives when `p` is odd (`p & 1`), insert a missing ')' to complete the pair (`k += 1, p -= 1`). If `p < 0` upon a ')', insert an opening '(' (`k += 1, p += 2`), achieving a branchless single-pass O(N) time and O(1) space greedy solution.
 * **Mistake Made:** None
 * **Reattempt Reason/Context:** N/A
