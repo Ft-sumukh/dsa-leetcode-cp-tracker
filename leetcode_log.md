@@ -2,12 +2,12 @@
 
 ## 📊 Summary Statistics
 
-* **Total Solved:** 113
+* **Total Solved:** 115
   * **Easy:** 28
-  * **Medium:** 64
-  * **Hard:** 21
+  * **Medium:** 65
+  * **Hard:** 22
 * **Assistance Breakdown:**
-  * **Independent Solves:** 113
+  * **Independent Solves:** 115
   * **Hint-Assisted Solves:** 0
   * **Editorial-Assisted Solves:** 0
 * **Problems Needing Reattempt:** 2 ⚠️
@@ -34,7 +34,7 @@
 | Graph Algorithms | 3 | Medium |
 | Union Find | 0 | - |
 | Trie | 0 | - |
-| Segment Tree | 1 | Weak |
+| Segment Tree | 2 | Weak |
 
 ---
 
@@ -155,6 +155,8 @@
 | 301 | Remove Invalid Parentheses | Hard | Backtracking (Backtracking) | 2026-10-07 | Independent | O(2^N) / O(N) | Yes | No |
 | 1021 | Remove Outermost Parentheses | Easy | Stacks (Stack) | 2026-10-08 | Independent | O(N) / O(1) | Yes | No |
 | 1541 | Minimum Insertions to Balance a Parentheses String | Medium | Stacks (Greedy) | 2026-10-09 | Independent | O(N) / O(1) | Yes | No |
+| 2916 | Subarrays Distinct Element Sum of Squares II | Hard | Advanced Data Structures (Segment Tree) | 2026-10-16 | Independent | O(N log N) / O(N) | Yes | No |
+| 3551 | Minimum Swaps to Sort by Digit Sum | Medium | Sorting (Sorting) | 2026-10-17 | Independent | O(N log N) / O(N) | Yes | No |
 
 ---
 
@@ -722,5 +724,15 @@
 
 ### LeetCode #1541: Minimum Insertions to Balance a Parentheses String
 * **Main Idea:** Track required closing parentheses units `p` and insertion insertions `k`. Each '(' requires 2 units of ')'. If an opening bracket arrives when `p` is odd (`p & 1`), insert a missing ')' to complete the pair (`k += 1, p -= 1`). If `p < 0` upon a ')', insert an opening '(' (`k += 1, p += 2`), achieving a branchless single-pass O(N) time and O(1) space greedy solution.
+* **Mistake Made:** None
+* **Reattempt Reason/Context:** N/A
+
+### LeetCode #2916: Subarrays Distinct Element Sum of Squares II
+* **Main Idea:** Use Fenwick trees (Binary Indexed Trees) over previous duplicate positions to compute contribution changes in O(N log N) time. For each right endpoint r, the appearance of nums[r] increases the distinct count by 1 for all subarrays starting at l in (p, r], where p is the previous occurrence. Query the count and sum of previous positions > p in the Fenwick trees to determine the incremental squared gain, adding (n - r) * gain modulo 1e9+7 to the total.
+* **Mistake Made:** None
+* **Reattempt Reason/Context:** N/A
+
+### LeetCode #3551: Minimum Swaps to Sort by Digit Sum
+* **Main Idea:** Calculate digit sum for each number and sort pairs of `(digit_sum, value)` to obtain each number's target sorted index (rank). Construct an array `home` representing target destinations and resolve permutation cycles via in-place cycle sorting (`while (home[i] != i) swap(home[i], home[home[i]])`), counting each swap to find the minimum number of swaps in O(N log N) time and O(N) space.
 * **Mistake Made:** None
 * **Reattempt Reason/Context:** N/A

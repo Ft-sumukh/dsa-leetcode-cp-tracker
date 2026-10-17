@@ -14,7 +14,7 @@ Track progress across all 20 core DSA topics.
 | [Queues](#queues) | Not Started | 0 | 0 | 0 | 0 | 0 | None |
 | [Recursion](#recursion) | Learning | 1 | 1 | 0 | 1 | 0 | Low |
 | [Backtracking](#backtracking) | Practicing | 5 | 5 | 0 | 3 | 2 | Medium |
-| [Sorting](#sorting) | Practicing | 4 | 4 | 0 | 4 | 0 | Medium |
+| [Sorting](#sorting) | Practicing | 5 | 5 | 0 | 5 | 0 | Medium |
 | [Searching](#searching) | Practicing | 4 | 4 | 1 | 2 | 1 | Medium |
 | [Trees](#trees) | Strong | 6 | 6 | 3 | 2 | 1 | High |
 | [BST](#bst) | Practicing | 3 | 3 | 0 | 3 | 0 | Medium |
@@ -24,7 +24,7 @@ Track progress across all 20 core DSA topics.
 | [Dynamic Programming](#dynamic-programming) | Strong | 13 | 13 | 2 | 4 | 7 | High |
 | [Tries](#tries) | Not Started | 0 | 0 | 0 | 0 | 0 | None |
 | [Bit Manipulation](#bit-manipulation) | Learning | 1 | 1 | 0 | 1 | 0 | Low |
-| [Advanced Data Structures](#advanced-data-structures) | Learning | 2 | 2 | 0 | 1 | 1 | Low |
+| [Advanced Data Structures](#advanced-data-structures) | Learning | 3 | 3 | 0 | 1 | 2 | Low |
 | [Advanced Algorithms](#advanced-algorithms) | Strong | 9 | 9 | 5 | 3 | 1 | High |
 
 ---
