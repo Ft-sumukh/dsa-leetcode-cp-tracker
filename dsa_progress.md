@@ -17,7 +17,7 @@ Track progress across all 20 core DSA topics.
 | [Sorting](#sorting) | Practicing | 5 | 5 | 0 | 5 | 0 | Medium |
 | [Searching](#searching) | Practicing | 4 | 4 | 1 | 2 | 1 | Medium |
 | [Trees](#trees) | Strong | 6 | 6 | 3 | 2 | 1 | High |
-| [BST](#bst) | Practicing | 3 | 3 | 0 | 3 | 0 | Medium |
+| [BST](#bst) | Practicing | 4 | 4 | 0 | 3 | 1 | Medium |
 | [Heaps](#heaps) | Learning | 1 | 1 | 0 | 1 | 0 | Low |
 | [Graphs](#graphs) | Practicing | 3 | 3 | 0 | 3 | 0 | Medium |
 | [Greedy](#greedy) | Practicing | 6 | 6 | 1 | 3 | 2 | Medium |
@@ -186,6 +186,7 @@ Track progress across all 20 core DSA topics.
 * **Patterns Learned:**
   * Backtracking
   * Dynamic Programming
+  * Monotonic Stack
   * Tree Traversal
 * **Common Mistakes:**
   * None

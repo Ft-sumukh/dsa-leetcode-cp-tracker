@@ -2,12 +2,12 @@
 
 ## 📊 Summary Statistics
 
-* **Total Solved:** 115
+* **Total Solved:** 116
   * **Easy:** 28
   * **Medium:** 65
-  * **Hard:** 22
+  * **Hard:** 23
 * **Assistance Breakdown:**
-  * **Independent Solves:** 115
+  * **Independent Solves:** 116
   * **Hint-Assisted Solves:** 0
   * **Editorial-Assisted Solves:** 0
 * **Problems Needing Reattempt:** 2 ⚠️
@@ -22,7 +22,7 @@
 | Prefix Sum | 5 | Medium |
 | Binary Search | 6 | Strong |
 | Stack | 9 | Strong |
-| Monotonic Stack | 0 | - |
+| Monotonic Stack | 1 | Weak |
 | Linked List | 8 | Strong |
 | Tree Traversal | 4 | Medium |
 | BFS | 3 | Medium |
@@ -157,6 +157,7 @@
 | 1541 | Minimum Insertions to Balance a Parentheses String | Medium | Stacks (Greedy) | 2026-10-09 | Independent | O(N) / O(1) | Yes | No |
 | 2916 | Subarrays Distinct Element Sum of Squares II | Hard | Advanced Data Structures (Segment Tree) | 2026-10-16 | Independent | O(N log N) / O(N) | Yes | No |
 | 3551 | Minimum Swaps to Sort by Digit Sum | Medium | Sorting (Sorting) | 2026-10-17 | Independent | O(N log N) / O(N) | Yes | No |
+| 1569 | Number of Ways to Reorder Array to Get Same BST | Hard | BST (Monotonic Stack) | 2026-10-18 | Independent | O(N) / O(N) | Yes | No |
 
 ---
 
@@ -734,5 +735,10 @@
 
 ### LeetCode #3551: Minimum Swaps to Sort by Digit Sum
 * **Main Idea:** Calculate digit sum for each number and sort pairs of `(digit_sum, value)` to obtain each number's target sorted index (rank). Construct an array `home` representing target destinations and resolve permutation cycles via in-place cycle sorting (`while (home[i] != i) swap(home[i], home[home[i]])`), counting each swap to find the minimum number of swaps in O(N log N) time and O(N) space.
+* **Mistake Made:** None
+* **Reattempt Reason/Context:** N/A
+
+### LeetCode #1569: Number of Ways to Reorder Array to Get Same BST
+* **Main Idea:** By the Hook Length Formula for trees, the total number of permutations generating an identical BST is `n! / prod(subtree_sizes) - 1`. Since the values in any BST subtree form a contiguous range bounded by left and right walls that were inserted earlier, maintain a monotonic stack of values sorted by insertion time `born[v]` to compute every subtree size in a single pass in O(N) time and O(N) space.
 * **Mistake Made:** None
 * **Reattempt Reason/Context:** N/A
