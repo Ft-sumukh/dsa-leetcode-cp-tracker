@@ -2,12 +2,12 @@
 
 ## 📊 Summary Statistics
 
-* **Total Solved:** 116
+* **Total Solved:** 117
   * **Easy:** 28
   * **Medium:** 65
-  * **Hard:** 23
+  * **Hard:** 24
 * **Assistance Breakdown:**
-  * **Independent Solves:** 116
+  * **Independent Solves:** 117
   * **Hint-Assisted Solves:** 0
   * **Editorial-Assisted Solves:** 0
 * **Problems Needing Reattempt:** 2 ⚠️
@@ -19,7 +19,7 @@
 | Hashing | 10 | Strong |
 | Two Pointers | 22 | Strong |
 | Sliding Window | 6 | Medium |
-| Prefix Sum | 5 | Medium |
+| Prefix Sum | 6 | Medium |
 | Binary Search | 6 | Strong |
 | Stack | 9 | Strong |
 | Monotonic Stack | 1 | Weak |
@@ -158,6 +158,7 @@
 | 2916 | Subarrays Distinct Element Sum of Squares II | Hard | Advanced Data Structures (Segment Tree) | 2026-10-16 | Independent | O(N log N) / O(N) | Yes | No |
 | 3551 | Minimum Swaps to Sort by Digit Sum | Medium | Sorting (Sorting) | 2026-10-17 | Independent | O(N log N) / O(N) | Yes | No |
 | 1569 | Number of Ways to Reorder Array to Get Same BST | Hard | BST (Monotonic Stack) | 2026-10-18 | Independent | O(N) / O(N) | Yes | No |
+| 3886 | Sum of Sortable Integers | Hard | Arrays (Prefix Sum) | 2026-10-20 | Independent | O(N * d(N)) / O(N) | Yes | No |
 
 ---
 
@@ -740,5 +741,10 @@
 
 ### LeetCode #1569: Number of Ways to Reorder Array to Get Same BST
 * **Main Idea:** By the Hook Length Formula for trees, the total number of permutations generating an identical BST is `n! / prod(subtree_sizes) - 1`. Since the values in any BST subtree form a contiguous range bounded by left and right walls that were inserted earlier, maintain a monotonic stack of values sorted by insertion time `born[v]` to compute every subtree size in a single pass in O(N) time and O(N) space.
+* **Mistake Made:** None
+* **Reattempt Reason/Context:** N/A
+
+### LeetCode #3886: Sum of Sortable Integers
+* **Main Idea:** Precompute prefix counts of descents `desc`, prefix maximums `premax`, and suffix minimums `sufmin` to evaluate cut points (`cut[m] = premax[m-1] <= sufmin[m]`). A block [l, r] is rotatable into non-decreasing order iff its cyclic descent count is at most 1 (`desc[r] - desc[l] + (nums[r] > nums[l]) <= 1`). For each divisor k of n, verify that all blocks start at valid cuts and are rotatable in O(n/k) time, summing valid divisors in O(N * d(N)) time and O(N) space.
 * **Mistake Made:** None
 * **Reattempt Reason/Context:** N/A
