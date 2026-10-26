@@ -2,12 +2,12 @@
 
 ## 📊 Summary Statistics
 
-* **Total Solved:** 117
+* **Total Solved:** 119
   * **Easy:** 28
-  * **Medium:** 65
+  * **Medium:** 67
   * **Hard:** 24
 * **Assistance Breakdown:**
-  * **Independent Solves:** 117
+  * **Independent Solves:** 119
   * **Hint-Assisted Solves:** 0
   * **Editorial-Assisted Solves:** 0
 * **Problems Needing Reattempt:** 2 ⚠️
@@ -26,9 +26,9 @@
 | Linked List | 8 | Strong |
 | Tree Traversal | 4 | Medium |
 | BFS | 3 | Medium |
-| DFS | 3 | Medium |
+| DFS | 4 | Medium |
 | Heap | 2 | Weak |
-| Greedy | 17 | Strong |
+| Greedy | 18 | Strong |
 | Backtracking | 7 | Strong |
 | Dynamic Programming | 10 | Strong |
 | Graph Algorithms | 3 | Medium |
@@ -159,6 +159,8 @@
 | 3551 | Minimum Swaps to Sort by Digit Sum | Medium | Sorting (Sorting) | 2026-10-17 | Independent | O(N log N) / O(N) | Yes | No |
 | 1569 | Number of Ways to Reorder Array to Get Same BST | Hard | BST (Monotonic Stack) | 2026-10-18 | Independent | O(N) / O(N) | Yes | No |
 | 3886 | Sum of Sortable Integers | Hard | Arrays (Prefix Sum) | 2026-10-20 | Independent | O(N * d(N)) / O(N) | Yes | No |
+| 3942 | Minimum Operations to Sort a Permutation | Medium | Greedy (Greedy) | 2026-10-22 | Independent | O(N) / O(1) | Yes | No |
+| 3619 | Count Islands With Total Value Divisible by K | Medium | Graphs (DFS) | 2026-10-26 | Independent | O(M * N) / O(M * N) | Yes | No |
 
 ---
 
@@ -746,5 +748,15 @@
 
 ### LeetCode #3886: Sum of Sortable Integers
 * **Main Idea:** Precompute prefix counts of descents `desc`, prefix maximums `premax`, and suffix minimums `sufmin` to evaluate cut points (`cut[m] = premax[m-1] <= sufmin[m]`). A block [l, r] is rotatable into non-decreasing order iff its cyclic descent count is at most 1 (`desc[r] - desc[l] + (nums[r] > nums[l]) <= 1`). For each divisor k of n, verify that all blocks start at valid cuts and are rotatable in O(n/k) time, summing valid divisors in O(N * d(N)) time and O(N) space.
+* **Mistake Made:** None
+* **Reattempt Reason/Context:** N/A
+
+### LeetCode #3942: Minimum Operations to Sort a Permutation
+* **Main Idea:** Check if the array is a cyclic shift of the sorted permutation either ascending (`A[i] == (A[i - 1] + 1) % n`) or descending (`A[i - 1] == (A[i] + 1) % n`). If cyclic ascending, cost is `min(n - A.front(), A.front() + 2)` shifts/reversals (or 0 if already sorted). If cyclic descending, cost is `min(n - A.back(), A.back()) + 1` via one full reverse plus shifts. Otherwise, return -1.
+* **Mistake Made:** None
+* **Reattempt Reason/Context:** N/A
+
+### LeetCode #3619: Count Islands With Total Value Divisible by K
+* **Main Idea:** Standard connected component grid traversal using DFS. For each unvisited land cell (`grid[i][j] > 0`), run 4-directional DFS to accumulate total island sum while marking visited cells by setting them to 0 (in-place modification). Check if island sum is divisible by k (`sum % k == 0`) and increment the counter in O(M * N) time.
 * **Mistake Made:** None
 * **Reattempt Reason/Context:** N/A
