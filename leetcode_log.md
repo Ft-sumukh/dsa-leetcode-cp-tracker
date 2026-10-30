@@ -2,12 +2,12 @@
 
 ## 📊 Summary Statistics
 
-* **Total Solved:** 119
+* **Total Solved:** 120
   * **Easy:** 28
-  * **Medium:** 67
+  * **Medium:** 68
   * **Hard:** 24
 * **Assistance Breakdown:**
-  * **Independent Solves:** 119
+  * **Independent Solves:** 120
   * **Hint-Assisted Solves:** 0
   * **Editorial-Assisted Solves:** 0
 * **Problems Needing Reattempt:** 2 ⚠️
@@ -31,7 +31,7 @@
 | Greedy | 18 | Strong |
 | Backtracking | 7 | Strong |
 | Dynamic Programming | 10 | Strong |
-| Graph Algorithms | 3 | Medium |
+| Graph Algorithms | 4 | Medium |
 | Union Find | 0 | - |
 | Trie | 0 | - |
 | Segment Tree | 2 | Weak |
@@ -161,6 +161,7 @@
 | 3886 | Sum of Sortable Integers | Hard | Arrays (Prefix Sum) | 2026-10-20 | Independent | O(N * d(N)) / O(N) | Yes | No |
 | 3942 | Minimum Operations to Sort a Permutation | Medium | Greedy (Greedy) | 2026-10-22 | Independent | O(N) / O(1) | Yes | No |
 | 3619 | Count Islands With Total Value Divisible by K | Medium | Graphs (DFS) | 2026-10-26 | Independent | O(M * N) / O(M * N) | Yes | No |
+| 3970 | Shortest Path With At Most K Consecutive Identical Characters | Medium | Graphs (Graph Algorithms) | 2026-10-30 | Independent | O((V + E) * k * log(V * k)) / O(V * k + E) | Yes | No |
 
 ---
 
@@ -758,5 +759,10 @@
 
 ### LeetCode #3619: Count Islands With Total Value Divisible by K
 * **Main Idea:** Standard connected component grid traversal using DFS. For each unvisited land cell (`grid[i][j] > 0`), run 4-directional DFS to accumulate total island sum while marking visited cells by setting them to 0 (in-place modification). Check if island sum is divisible by k (`sum % k == 0`) and increment the counter in O(M * N) time.
+* **Mistake Made:** None
+* **Reattempt Reason/Context:** N/A
+
+### LeetCode #3970: Shortest Path With At Most K Consecutive Identical Characters
+* **Main Idea:** State-expanded Dijkstra's algorithm tracking `(distance, run, node)` via a min-heap, where `run` is the current consecutive length of identical node labels. Prune dominated states using `best[x]`, storing the minimum run length with which node `x` has been settled; since Dijkstra settles states in non-decreasing order of distance, any visit to `x` with `run >= best[x]` is sub-optimal and skipped.
 * **Mistake Made:** None
 * **Reattempt Reason/Context:** N/A

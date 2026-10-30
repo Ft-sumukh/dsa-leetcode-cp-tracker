@@ -19,7 +19,7 @@ Track progress across all 20 core DSA topics.
 | [Trees](#trees) | Strong | 6 | 6 | 3 | 2 | 1 | High |
 | [BST](#bst) | Practicing | 4 | 4 | 0 | 3 | 1 | Medium |
 | [Heaps](#heaps) | Learning | 1 | 1 | 0 | 1 | 0 | Low |
-| [Graphs](#graphs) | Practicing | 4 | 4 | 0 | 4 | 0 | Medium |
+| [Graphs](#graphs) | Practicing | 5 | 5 | 0 | 5 | 0 | Medium |
 | [Greedy](#greedy) | Practicing | 7 | 7 | 1 | 4 | 2 | Medium |
 | [Dynamic Programming](#dynamic-programming) | Strong | 13 | 13 | 2 | 4 | 7 | High |
 | [Tries](#tries) | Not Started | 0 | 0 | 0 | 0 | 0 | None |
@@ -213,6 +213,7 @@ Track progress across all 20 core DSA topics.
 * **Patterns Learned:**
   * BFS
   * DFS
+  * Graph Algorithms
 * **Common Mistakes:**
   * None
 * **Weak Areas:**
