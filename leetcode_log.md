@@ -2,12 +2,12 @@
 
 ## 📊 Summary Statistics
 
-* **Total Solved:** 120
+* **Total Solved:** 121
   * **Easy:** 28
-  * **Medium:** 68
+  * **Medium:** 69
   * **Hard:** 24
 * **Assistance Breakdown:**
-  * **Independent Solves:** 120
+  * **Independent Solves:** 121
   * **Hint-Assisted Solves:** 0
   * **Editorial-Assisted Solves:** 0
 * **Problems Needing Reattempt:** 2 ⚠️
@@ -30,7 +30,7 @@
 | Heap | 2 | Weak |
 | Greedy | 18 | Strong |
 | Backtracking | 7 | Strong |
-| Dynamic Programming | 10 | Strong |
+| Dynamic Programming | 11 | Strong |
 | Graph Algorithms | 4 | Medium |
 | Union Find | 0 | - |
 | Trie | 0 | - |
@@ -162,6 +162,7 @@
 | 3942 | Minimum Operations to Sort a Permutation | Medium | Greedy (Greedy) | 2026-10-22 | Independent | O(N) / O(1) | Yes | No |
 | 3619 | Count Islands With Total Value Divisible by K | Medium | Graphs (DFS) | 2026-10-26 | Independent | O(M * N) / O(M * N) | Yes | No |
 | 3970 | Shortest Path With At Most K Consecutive Identical Characters | Medium | Graphs (Graph Algorithms) | 2026-10-30 | Independent | O((V + E) * k * log(V * k)) / O(V * k + E) | Yes | No |
+| 3665 | Twisted Mirror Path Count | Medium | Dynamic Programming (Dynamic Programming) | 2026-10-31 | Independent | O(M * N) / O(N) | Yes | No |
 
 ---
 
@@ -764,5 +765,10 @@
 
 ### LeetCode #3970: Shortest Path With At Most K Consecutive Identical Characters
 * **Main Idea:** State-expanded Dijkstra's algorithm tracking `(distance, run, node)` via a min-heap, where `run` is the current consecutive length of identical node labels. Prune dominated states using `best[x]`, storing the minimum run length with which node `x` has been settled; since Dijkstra settles states in non-decreasing order of distance, any visit to `x` with `run >= best[x]` is sub-optimal and skipped.
+* **Mistake Made:** None
+* **Reattempt Reason/Context:** N/A
+
+### LeetCode #3665: Twisted Mirror Path Count
+* **Main Idea:** Direction-aware grid dynamic programming using a 2x2 transfer matrix `mat[c]` at each cell `(i, j)`. Track incoming horizontal (`left`) and vertical (`top`) path counts. For empty cells (`c=0`), paths continue both right and down (`left + top`); for mirror cells (`c=1`), mirrors deflect horizontal paths downward and vertical paths rightward (swapping direction counts). Achieves O(M * N) time and O(N) space.
 * **Mistake Made:** None
 * **Reattempt Reason/Context:** N/A
