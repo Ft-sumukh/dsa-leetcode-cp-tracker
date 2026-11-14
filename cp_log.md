@@ -38,6 +38,7 @@ Identify whether weaknesses in contests are due to:
 | Date | Platform | Contest Name | Rank | Rating (Before ➡️ After) | Attempted | Solved (During/After) | Wrong Subs | Topics | Primary Weakness / Failure Reason |
 | :---: | :---: | :--- | :---: | :---: | :---: | :---: | :---: | :--- | :--- |
 | 2026-11-14 | Codeforces | Codeforces Round 1134 (Div. 4) | — | — | 1 | 1 (H) | 0 | Trees, Binary Search, Tree Diameter | None (Clean solve / Upsolve) |
+| 2026-11-14 | Codeforces | Codeforces Round 321 (Div. 2) | — | — | 1 | 1 (C) | 0 | Trees, DFS, Graphs | None (Clean solve / Upsolve) |
 
 *Platforms: Codeforces / CodeChef / AtCoder*
 
@@ -56,3 +57,14 @@ Identify whether weaknesses in contests are due to:
   * **Solution File:** [`codeforces/2290H_extra_road.cpp`](file:///d:/leetcode/codeforces/2290H_extra_road.cpp)
   * **Approach:** Binary search on the answer $x$ (the minimum number of unreachable cities after adding at most one shortcut edge). For a candidate $x$, mark all edges whose subtree size exceeds $x$. Any single added shortcut edge can connect the ends of at most one path; hence, all critical edges exceeding $x$ must lie along a single simple path in the tree. We verify this by computing the diameter endpoints among marked nodes using double DFS/BFS and checking if all marked edges are covered by this diameter path.
   * **Complexity:** Time $O(N \log N)$, Space $O(N)$.
+
+### Codeforces Round 321 (Div. 2) (Date: 2026-11-14)
+* **Contest URL:** [Codeforces Contest 580](https://codeforces.com/contest/580)
+* **Solved During/After:** C (580C - Kefa and Park)
+* **Wrong Submissions:** 0
+* **Topics Involved:** Trees, Depth-First Search (DFS), Graphs
+* **Key Problem Review - 580C (Kefa and Park):**
+  * **Solution File:** [`codeforces/580C_kefa_and_park.cpp`](file:///d:/leetcode/codeforces/580C_kefa_and_park.cpp)
+  * **Approach:** Perform DFS from the root (vertex 1) down to the leaves, keeping track of the running consecutive count of vertices with cats along the current root-to-node path. If the current vertex has a cat, increment the consecutive count; otherwise, reset it to 0. If `consecutive > m`, prune that subtree immediately. If a leaf vertex is reached without exceeding $m$ consecutive cats, increment the valid restaurant count.
+  * **Complexity:** Time $O(N)$, Space $O(N)$.
+
