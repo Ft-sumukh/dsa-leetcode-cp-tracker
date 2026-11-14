@@ -1,0 +1,7 @@
+# Ignore unrelated projects
+crm-repo/
+piper-crm/
+
+# Ignore Python caches
+__pycache__/
+*.pyc

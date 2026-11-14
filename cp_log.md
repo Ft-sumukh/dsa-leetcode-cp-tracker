@@ -37,7 +37,7 @@ Identify whether weaknesses in contests are due to:
 
 | Date | Platform | Contest Name | Rank | Rating (Before ➡️ After) | Attempted | Solved (During/After) | Wrong Subs | Topics | Primary Weakness / Failure Reason |
 | :---: | :---: | :--- | :---: | :---: | :---: | :---: | :---: | :--- | :--- |
-| | | | | | | | | | |
+| 2026-11-14 | Codeforces | Codeforces Round 1134 (Div. 4) | — | — | 1 | 1 (H) | 0 | Trees, Binary Search, Tree Diameter | None (Clean solve / Upsolve) |
 
 *Platforms: Codeforces / CodeChef / AtCoder*
 
@@ -47,11 +47,12 @@ Identify whether weaknesses in contests are due to:
 
 *(Use this section to review each contest in detail, analyzing specific problems, wrong submissions, and key takeaways.)*
 
-### Example Entry:
-#### AtCoder Beginner Contest 300 (Date: 2026-08-25)
-* **Solved During:** A, B, C
-* **Solved After (Upsolved):** D
-* **Unsolved:** E, F
-* **Wrong Submissions:** 2 on C (integer overflow)
-* **Main Reason for Failure:** Did not use `long long` for product calculation in C (Implementation/Debugging weakness).
-* **Topics involved:** Binary search, prime factorization, combinatorics.
+### Codeforces Round 1134 (Div. 4) (Date: 2026-11-14)
+* **Contest URL:** [Codeforces Contest 2290](https://codeforces.com/contest/2290)
+* **Solved During/After:** H (2290H - Extra Road)
+* **Wrong Submissions:** 0
+* **Topics Involved:** Binary Search, Trees, Tree Diameter, Subtree Size
+* **Key Problem Review - 2290H (Extra Road):**
+  * **Solution File:** [`codeforces/2290H_extra_road.cpp`](file:///d:/leetcode/codeforces/2290H_extra_road.cpp)
+  * **Approach:** Binary search on the answer $x$ (the minimum number of unreachable cities after adding at most one shortcut edge). For a candidate $x$, mark all edges whose subtree size exceeds $x$. Any single added shortcut edge can connect the ends of at most one path; hence, all critical edges exceeding $x$ must lie along a single simple path in the tree. We verify this by computing the diameter endpoints among marked nodes using double DFS/BFS and checking if all marked edges are covered by this diameter path.
+  * **Complexity:** Time $O(N \log N)$, Space $O(N)$.
