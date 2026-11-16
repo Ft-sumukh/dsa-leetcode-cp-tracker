@@ -39,6 +39,7 @@ Identify whether weaknesses in contests are due to:
 | :---: | :---: | :--- | :---: | :---: | :---: | :---: | :---: | :--- | :--- |
 | 2026-11-14 | Codeforces | Codeforces Round 1134 (Div. 4) | — | — | 1 | 1 (H) | 0 | Trees, Binary Search, Tree Diameter | None (Clean solve / Upsolve) |
 | 2026-11-14 | Codeforces | Codeforces Round 321 (Div. 2) | — | — | 1 | 1 (C) | 0 | Trees, DFS, Graphs | None (Clean solve / Upsolve) |
+| 2026-11-16 | Codeforces | Codeforces Round 629 (Div. 3) | — | — | 1 | 1 (E) | 0 | Trees, DFS, Ancestors | None (Clean solve / Upsolve) |
 
 *Platforms: Codeforces / CodeChef / AtCoder*
 
@@ -67,4 +68,14 @@ Identify whether weaknesses in contests are due to:
   * **Solution File:** [`codeforces/580C_kefa_and_park.cpp`](file:///d:/leetcode/codeforces/580C_kefa_and_park.cpp)
   * **Approach:** Perform DFS from the root (vertex 1) down to the leaves, keeping track of the running consecutive count of vertices with cats along the current root-to-node path. If the current vertex has a cat, increment the consecutive count; otherwise, reset it to 0. If `consecutive > m`, prune that subtree immediately. If a leaf vertex is reached without exceeding $m$ consecutive cats, increment the valid restaurant count.
   * **Complexity:** Time $O(N)$, Space $O(N)$.
+
+### Codeforces Round 629 (Div. 3) (Date: 2026-11-16)
+* **Contest URL:** [Codeforces Contest 1328](https://codeforces.com/contest/1328)
+* **Solved During/After:** E (1328E - Tree Queries)
+* **Wrong Submissions:** 0
+* **Topics Involved:** Trees, Depth-First Search (DFS), Lowest Common Ancestor / Ancestor Checking
+* **Key Problem Review - 1328E (Tree Queries):**
+  * **Solution File:** [`codeforces/1328E_tree_queries.cpp`](file:///d:/leetcode/codeforces/1328E_tree_queries.cpp)
+  * **Approach:** A query vertex $u$ is within distance 1 of a root-to-$v$ path if and only if $u$ or $parent[u]$ lies on the path. Since the path begins at the root, every node on it is an ancestor of the path endpoint. Therefore, replacing each $u$ (except 1) with $parent[u]$ reduces the problem to checking if all adjusted vertices lie on a single ancestor chain. We pick the deepest vertex among the query set as the target endpoint, and verify that the parent of every other query vertex is an ancestor of this deepest vertex.
+  * **Complexity:** Time $O(N + \sum K \cdot H)$ where $H \le N$ is tree height (or $O(N + \sum K)$ with entry/exit timestamps), Space $O(N)$.
 
