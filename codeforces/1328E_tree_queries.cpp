@@ -11,87 +11,139 @@
  *   holds if and only if all these adjusted vertices lie on a single chain from the root.
  * - To verify this, select the deepest query vertex (`deepest`). If a valid chain exists, it must
  *   lead down to `deepest`.
- * - For every query node `u`, check whether `parent[u]` is an ancestor of `deepest` by walking up
- *   parent pointers from `deepest` to the depth of `parent[u]`.
+ * 
+ * Optimization Note (Fix for TLE on Test 80):
+ * - The naive approach climbed parent pointers step-by-step from `deepest` to `depth[p]` in O(K * H)
+ *   time per query, which exceeded the time limit (TLE on test 80) for degenerate/deep trees.
+ * - In this optimal version, we preprocess entry and exit timestamps (`tin` and `tout`) during an
+ *   iterative DFS (avoiding call stack overflow on deep trees).
+ * - An ancestor check `isAncestor(u, v)` is evaluated in O(1):
+ *     isAncestor(u, v) = (tin[u] <= tin[v] && tout[v] <= tout[u])
+ * - This drops query time to O(K) and overall time to O(N + sum(K)).
  * 
  * Time Complexity:
- * - Preprocessing: O(N) via DFS to compute depths and parents.
- * - Per Query: O(K * H) where H <= N is the tree height; sum of K <= 2e5.
- * Space Complexity: O(N) for tree adjacency, parent, and depth arrays.
+ * - Preprocessing: O(N) via iterative DFS to record tin, tout, parent, and depth.
+ * - Per Query: O(K) using O(1) ancestor checks with tin/tout timestamps.
+ * - Total Time: O(N + sum(K)) <= 2e5 operations.
+ * Space Complexity: O(N) for adjacency list, parent, depth, tin, and tout arrays.
  */
 
 #include <bits/stdc++.h>
 using namespace std;
 
 int n, m;
+
 vector<vector<int>> adj;
 vector<int> parent, depth;
+vector<int> tin, tout;
 
-// DFS to calculate parent and depth of every node
-void dfs(int u, int p) {
-    parent[u] = p;                  // Store the parent of current node
+int timer = 0;
 
-    for (int v : adj[u]) {          // Visit every neighbour
-        if (v == p) continue;       // Do not travel back to parent
+// Iterative DFS to calculate parent, depth, entry and exit times
+void dfs(int root) {
 
-        depth[v] = depth[u] + 1;    // Calculate depth of child
-        dfs(v, u);                  // Recursively visit child
+    // {current node, parent node, state}
+    // state 0 = entering node
+    // state 1 = exiting node
+    stack<tuple<int, int, int>> st;
+
+    st.push({root, root, 0});
+
+    while (!st.empty()) {
+
+        auto [u, p, state] = st.top();
+        st.pop();
+
+        if (state == 0) {
+
+            parent[u] = p;       // Store parent of current node
+            tin[u] = timer++;    // Record entry time
+
+            st.push({u, p, 1});  // Schedule exit after children
+
+            // Visit children in reverse adjacency order
+            for (int i = (int)adj[u].size() - 1; i >= 0; i--) {
+
+                int v = adj[u][i];
+
+                if (v == p) continue;
+
+                depth[v] = depth[u] + 1; // Calculate child depth
+
+                st.push({v, u, 0});      // Schedule child traversal
+            }
+        }
+        else {
+
+            tout[u] = timer++;   // Record exit time
+        }
     }
 }
 
+// Check whether u is an ancestor of v
+bool isAncestor(int u, int v) {
+
+    return tin[u] <= tin[v] &&
+           tout[v] <= tout[u];
+}
+
+// Process one query
 void solve() {
+
     int k;
-    cin >> k;                       // Number of selected vertices
+    cin >> k;
 
     vector<int> nodes(k);
 
-    for (int i = 0; i < k; i++)
-        cin >> nodes[i];            // Read selected vertices
+    int deepest = 1;
 
-    int deepest = nodes[0];         // Assume first node is deepest
+    // Read query nodes and find the deepest node
+    for (int i = 0; i < k; i++) {
 
-    // Find the deepest selected vertex
-    for (int u : nodes) {
-        if (depth[u] > depth[deepest])
-            deepest = u;
+        cin >> nodes[i];
+
+        if (depth[nodes[i]] > depth[deepest]) {
+            deepest = nodes[i];
+        }
     }
 
-    // Check whether every selected vertex can reach
-    // the path to deepest by moving up at most one edge
+    // Check whether all adjusted nodes are ancestors of deepest
     for (int u : nodes) {
 
-        if (u == 1) continue;       // Root has no parent
+        if (u == deepest) continue;
 
-        int p = parent[u];          // Move selected node to its parent
+        // Move the node up by one edge
+        if (u != 1) {
+            u = parent[u];
+        }
 
         // The adjusted node must be an ancestor of deepest
-        // (or be deepest itself)
-        int v = deepest;
+        if (!isAncestor(u, deepest)) {
 
-        while (depth[v] > depth[p])
-            v = parent[v];
-
-        if (v != p) {
             cout << "NO\n";
             return;
         }
     }
 
-    cout << "YES\n";                // All selected nodes satisfy the condition
+    cout << "YES\n";
 }
 
 int main() {
+
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    cin >> n >> m;                  // Read number of nodes and queries
+    cin >> n >> m;
 
     adj.resize(n + 1);
     parent.resize(n + 1);
     depth.resize(n + 1, 0);
+    tin.resize(n + 1);
+    tout.resize(n + 1);
 
-    // Build the tree
+    // Build the adjacency list
     for (int i = 0; i < n - 1; i++) {
+
         int u, v;
         cin >> u >> v;
 
@@ -99,10 +151,13 @@ int main() {
         adj[v].push_back(u);
     }
 
-    dfs(1, 0);                      // Root the tree at node 1
+    // Preprocess the tree
+    dfs(1);
 
-    while (m--)
-        solve();                    // Process each query
+    // Answer all queries
+    while (m--) {
+        solve();
+    }
 
     return 0;
 }
