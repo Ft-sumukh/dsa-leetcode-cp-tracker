@@ -40,6 +40,7 @@ Identify whether weaknesses in contests are due to:
 | 2026-11-14 | Codeforces | Codeforces Round 1134 (Div. 4) | — | — | 1 | 1 (H) | 0 | Trees, Binary Search, Tree Diameter | None (Clean solve / Upsolve) |
 | 2026-11-14 | Codeforces | Codeforces Round 321 (Div. 2) | — | — | 1 | 1 (C) | 0 | Trees, DFS, Graphs | None (Clean solve / Upsolve) |
 | 2026-11-16 | Codeforces | Codeforces Round 629 (Div. 3) | — | — | 1 | 1 (E) | 1 (TLE) | Trees, DFS, Euler Tour, Ancestors | TLE on Test 80: Replaced O(K*H) parent climbing with O(1) tin/tout check |
+| 2026-11-17 | Codeforces | Codeforces Round 498 (Div. 3) | — | — | 1 | 1 (E) | 0 | Trees, DFS, Preorder, Euler Tour | None (Clean solve / Upsolve) |
 
 *Platforms: Codeforces / CodeChef / AtCoder*
 
@@ -79,3 +80,14 @@ Identify whether weaknesses in contests are due to:
   * **Solution File:** [`codeforces/1328E_tree_queries.cpp`](file:///d:/leetcode/codeforces/1328E_tree_queries.cpp)
   * **Approach:** A query vertex $u$ is within distance 1 of a root-to-$v$ path if and only if $u$ or $parent[u]$ lies on the path. Since the path begins at the root, every node on it is an ancestor of the path endpoint. Therefore, replacing each $u$ (except 1) with $parent[u]$ reduces the problem to checking if all adjusted vertices lie on a single ancestor chain. We pick the deepest vertex among the query set as the target endpoint, and verify that the parent of every other query vertex is an ancestor of this deepest vertex using $O(1)$ Euler tour entry/exit timestamp intervals.
   * **Complexity:** Time $O(N + \sum K)$, Space $O(N).
+
+### Codeforces Round 498 (Div. 3) (Date: 2026-11-17)
+* **Contest URL:** [Codeforces Contest 1006](https://codeforces.com/contest/1006)
+* **Solved During/After:** E (1006E - Military Problem)
+* **Wrong Submissions:** 0
+* **Topics Involved:** Trees, Depth-First Search (DFS), Preorder Traversal, Subtree Range
+* **Key Problem Review - 1006E (Military Problem):**
+  * **Solution File:** [`codeforces/1006E_military_problem.cpp`](file:///d:/leetcode/codeforces/1006E_military_problem.cpp)
+  * **Approach:** Subordinates are visited in increasing order of IDs, exactly matching a DFS preorder traversal where child adjacency lists are sorted. Using an iterative DFS, record preorder sequence `order` and subtree bounds `tin[u]` and `tout[u]`. The entire subtree of `u` occupies contiguous positions `order[tin[u] ... tout[u]]`. For each query `(u, k)`, the $k$-th visited subordinate is located at index `pos = tin[u] + k - 1`. If `pos <= tout[u]`, answer is `order[pos]`; otherwise `-1`.
+  * **Complexity:** Time $O(N + Q)$ ($O(N)$ DFS preprocessing, $O(1)$ per query), Space $O(N)$.
+
