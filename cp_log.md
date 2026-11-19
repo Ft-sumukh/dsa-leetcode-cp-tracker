@@ -41,6 +41,7 @@ Identify whether weaknesses in contests are due to:
 | 2026-11-14 | Codeforces | Codeforces Round 321 (Div. 2) | — | — | 1 | 1 (C) | 0 | Trees, DFS, Graphs | None (Clean solve / Upsolve) |
 | 2026-11-16 | Codeforces | Codeforces Round 629 (Div. 3) | — | — | 1 | 1 (E) | 1 (TLE) | Trees, DFS, Euler Tour, Ancestors | TLE on Test 80: Replaced O(K*H) parent climbing with O(1) tin/tout check |
 | 2026-11-17 | Codeforces | Codeforces Round 498 (Div. 3) | — | — | 1 | 1 (E) | 0 | Trees, DFS, Preorder, Euler Tour | None (Clean solve / Upsolve) |
+| 2026-11-18 | Codeforces | Codeforces Round 635 (Div. 1) | — | — | 1 | 1 (A) | 0 | Trees, DFS, Greedy, Subtree Size, Sorting | None (Clean solve / Upsolve) |
 
 *Platforms: Codeforces / CodeChef / AtCoder*
 
@@ -79,7 +80,7 @@ Identify whether weaknesses in contests are due to:
 * **Key Problem Review - 1328E (Tree Queries):**
   * **Solution File:** [`codeforces/1328E_tree_queries.cpp`](file:///d:/leetcode/codeforces/1328E_tree_queries.cpp)
   * **Approach:** A query vertex $u$ is within distance 1 of a root-to-$v$ path if and only if $u$ or $parent[u]$ lies on the path. Since the path begins at the root, every node on it is an ancestor of the path endpoint. Therefore, replacing each $u$ (except 1) with $parent[u]$ reduces the problem to checking if all adjusted vertices lie on a single ancestor chain. We pick the deepest vertex among the query set as the target endpoint, and verify that the parent of every other query vertex is an ancestor of this deepest vertex using $O(1)$ Euler tour entry/exit timestamp intervals.
-  * **Complexity:** Time $O(N + \sum K)$, Space $O(N).
+  * **Complexity:** Time $O(N + \sum K)$, Space $O(N)$.
 
 ### Codeforces Round 498 (Div. 3) (Date: 2026-11-17)
 * **Contest URL:** [Codeforces Contest 1006](https://codeforces.com/contest/1006)
@@ -90,4 +91,14 @@ Identify whether weaknesses in contests are due to:
   * **Solution File:** [`codeforces/1006E_military_problem.cpp`](file:///d:/leetcode/codeforces/1006E_military_problem.cpp)
   * **Approach:** Subordinates are visited in increasing order of IDs, exactly matching a DFS preorder traversal where child adjacency lists are sorted. Using an iterative DFS, record preorder sequence `order` and subtree bounds `tin[u]` and `tout[u]`. The entire subtree of `u` occupies contiguous positions `order[tin[u] ... tout[u]]`. For each query `(u, k)`, the $k$-th visited subordinate is located at index `pos = tin[u] + k - 1`. If `pos <= tout[u]`, answer is `order[pos]`; otherwise `-1`.
   * **Complexity:** Time $O(N + Q)$ ($O(N)$ DFS preprocessing, $O(1)$ per query), Space $O(N)$.
+
+### Codeforces Round 635 (Div. 1) (Date: 2026-11-18)
+* **Contest URL:** [Codeforces Contest 1336](https://codeforces.com/contest/1336) *(also Div. 2 Problem C / 1337C)*
+* **Solved During/After:** A (1336A - Linova and Kingdom)
+* **Wrong Submissions:** 0
+* **Topics Involved:** Trees, Depth-First Search (DFS), Greedy, Subtree Sizes, Sorting
+* **Key Problem Review - 1336A (Linova and Kingdom):**
+  * **Solution File:** [`codeforces/1336A_linova_and_kingdom.cpp`](file:///d:/leetcode/codeforces/1336A_linova_and_kingdom.cpp)
+  * **Approach:** Root the tree at capital city 1 with 1-indexed depth (`depth[1] = 1`). Run an iterative DFS to record traversal order, parents, and depths, then accumulate subtree sizes `sz[u]` bottom-up in reverse DFS order. Making node `u` an industrial city contributes `(depth[u] - 1)` happiness from its ancestors minus `(sz[u] - 1)` lost by its descendants, giving a net greedy score of `depth[u] - sz[u]`. Because every child strictly scores higher than its parent, sorting scores descending and summing the top `k` automatically selects valid subtrees first and yields the maximum happiness.
+  * **Complexity:** Time $O(N \log N)$ (sorting scores; DFS and subtree calculation are $O(N)$), Space $O(N)$.
 

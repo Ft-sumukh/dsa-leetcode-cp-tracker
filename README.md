@@ -10,7 +10,7 @@ Welcome! This repository tracks your journey to becoming a strong problem solver
 | :--- | :---: | :---: | :---: | :---: | :--- |
 | **DSA Progress** | 121 / —  | 28 | 69 | 24 | Initialize topics & start practicing basics |
 | **LeetCode** | 121 | 28 | 69 | 24 | Establish a daily habit |
-| **Competitive Programming** | 4 Contests (4 Solved) | — | 3 | 1 | Participate in live rated rounds & upsolve |
+| **Competitive Programming** | 5 Contests (5 Solved) | — | 4 | 1 | Participate in live rated rounds & upsolve |
 
 ### 📈 Overall Totals
 * **Total Solved:** 121
