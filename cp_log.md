@@ -42,6 +42,7 @@ Identify whether weaknesses in contests are due to:
 | 2026-11-16 | Codeforces | Codeforces Round 629 (Div. 3) | — | — | 1 | 1 (E) | 1 (TLE) | Trees, DFS, Euler Tour, Ancestors | TLE on Test 80: Replaced O(K*H) parent climbing with O(1) tin/tout check |
 | 2026-11-17 | Codeforces | Codeforces Round 498 (Div. 3) | — | — | 1 | 1 (E) | 0 | Trees, DFS, Preorder, Euler Tour | None (Clean solve / Upsolve) |
 | 2026-11-18 | Codeforces | Codeforces Round 635 (Div. 1) | — | — | 1 | 1 (A) | 0 | Trees, DFS, Greedy, Subtree Size, Sorting | None (Clean solve / Upsolve) |
+| 2026-11-19 | Codeforces | Codeforces Round 722 (Div. 1) | — | — | 1 | 1 (A) | 0 | Trees, DP on Trees, Greedy, DFS | None (Clean solve / Upsolve) |
 
 *Platforms: Codeforces / CodeChef / AtCoder*
 
@@ -101,4 +102,14 @@ Identify whether weaknesses in contests are due to:
   * **Solution File:** [`codeforces/1336A_linova_and_kingdom.cpp`](file:///d:/leetcode/codeforces/1336A_linova_and_kingdom.cpp)
   * **Approach:** Root the tree at capital city 1 with 1-indexed depth (`depth[1] = 1`). Run an iterative DFS to record traversal order, parents, and depths, then accumulate subtree sizes `sz[u]` bottom-up in reverse DFS order. Making node `u` an industrial city contributes `(depth[u] - 1)` happiness from its ancestors minus `(sz[u] - 1)` lost by its descendants, giving a net greedy score of `depth[u] - sz[u]`. Because every child strictly scores higher than its parent, sorting scores descending and summing the top `k` automatically selects valid subtrees first and yields the maximum happiness.
   * **Complexity:** Time $O(N \log N)$ (sorting scores; DFS and subtree calculation are $O(N)$), Space $O(N)$.
+
+### Codeforces Round 722 (Div. 1) (Date: 2026-11-19)
+* **Contest URL:** [Codeforces Contest 1528](https://codeforces.com/contest/1528) *(also Div. 2 Problem C / 1529C)*
+* **Solved During/After:** A (1528A - Parsa's Humongous Tree)
+* **Wrong Submissions:** 0
+* **Topics Involved:** Trees, Dynamic Programming (Tree DP), Greedy, DFS
+* **Key Problem Review - 1528A (Parsa's Humongous Tree):**
+  * **Solution File:** [`codeforces/1528A_parsas_humongous_tree.cpp`](file:///d:/leetcode/codeforces/1528A_parsas_humongous_tree.cpp)
+  * **Approach:** Because the objective is a sum of convex functions $|a_u - a_v|$, the optimal value for each vertex $u$ is guaranteed to lie at an extreme boundary: either $a_u = l_u$ or $a_u = r_u$. We run an iterative DFS to build parent pointers and topological order, then compute a 2-state Tree DP bottom-up in reverse DFS order: $dp[u][0]$ (if choosing $l_u$) and $dp[u][1]$ (if choosing $r_u$). For each child $v$, transition greedily by taking the maximum between $v$ picking $l_v$ and $r_v$. Total answer is $\max(dp[1][0], dp[1][1])$.
+  * **Complexity:** Time $O(N)$ per testcase ($O(\sum N)$ overall), Space $O(N)$.
 
